@@ -1,0 +1,185 @@
+body {
+    background-color: #F2E8D5;
+    font-family: "Poppins", sans-serif !important;
+}
+
+img {
+    width: 100%;
+}
+
+.header {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-inline: 1rem;
+    background-color: rgb(58, 11, 12);
+    height: 7rem;
+
+    & img {
+        width: 6.4rem;
+    }
+
+    & nav .menu {
+        display: flex;
+        gap: 1rem;
+
+        & a {
+            background-color: rgb(58, 11, 12);
+            color: white;
+            border: 2px solid rgb(107, 70, 71);
+            padding: .5rem 1rem;
+            border-radius: 1.5rem;
+            transition: all .1s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.2);
+                color: rgb(245, 184, 65);
+            }
+        }
+
+        & li {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+    & .container {
+        background-color: #F2E8D5;
+        border-radius: .5rem;
+        max-width: 74rem;
+        height: 31.5rem;
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding-inline: 1rem;
+        border: 2px solid rgb(58, 11, 12);
+
+        & .mini-imagens {
+            display: flex;
+            flex-direction: column;
+            width: 3.438rem;
+            margin-top: 1.5rem;
+            gap: 1rem;
+            overflow: hidden;
+
+            & .cachacas-social{
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                margin-bottom: 1.5rem;
+                padding: .25rem;
+            }
+
+            & .instagram {
+                background-color: white;
+                border-radius: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                width: 2.875rem;
+                height: 2.875rem;
+                border: 2px solid rgb(58, 9, 10);
+
+                &:hover{
+                    cursor: pointer;
+                    border-color: rgb(245, 184, 65);
+                }
+
+
+                & .instagram-icon {
+                    height: 1.75rem;
+                    width: 1.75rem;
+                }
+            }
+
+            & img:not(.instagram-icon) {
+                border: 2px solid rgb(58, 11, 12);
+                height: 3.125rem;
+
+
+                &:hover {
+                    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        & .imagem-principal {
+            overflow: hidden;
+            cursor: crosshair;
+
+            &:hover {
+                border-inline: 2px solid rgb(58, 11, 12);
+            }
+
+            & img {
+                width: 42.5rem;
+                height: 31.5rem;
+                object-fit: contain;
+            }
+        }
+
+        & .description {
+            margin-top: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            max-height: 31.5rem;
+            overflow: hidden;
+
+            & h2 {
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: .5rem;
+                color: rgb(58, 9, 10);
+            }
+
+            & .description-list {
+                font-size: 1.25rem !important;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                flex: 1;
+                overflow: auto;
+                padding-right: 0.5rem;
+                padding-bottom: 1rem;
+                scrollbar-width: thin;
+                scrollbar-color: #8C6A32 #F2F2F2;
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #8C6A32;
+                    border-radius: .25rem;
+                    border: 2px solid #F2F2F2;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background-color: #A68144;
+                }
+
+                & li {
+                    
+                    color: rgb(107, 70, 71);
+                    font-weight: bolder;
+                    line-height: 140%;
+                }
+
+                & li span {
+                    color: rgb(58, 11, 12);
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

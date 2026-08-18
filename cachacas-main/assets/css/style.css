@@ -1,0 +1,202 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Header */
+.header {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-inline: 1rem;
+    background-color: rgb(58, 11, 12);
+}
+
+.header img {
+    width: 6.4rem;
+}
+
+.header nav .menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.header nav .menu a {
+    background-color: rgb(58, 11, 12);
+    color: white;
+    border: 2px solid rgb(107, 70, 71);
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    transition: all .1s ease-in-out;
+}
+
+.header nav .menu a:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.2);
+    color: rgb(245, 184, 65);
+}
+
+.header nav .menu li {
+    font-size: 1.125rem;
+}
+
+/* Main e container */
+main .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+/* Botões de navegação */
+.go-back,
+.go-forward {
+    background-color: rgb(245, 184, 65);
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.go-back { left: 25rem; }
+.go-forward { right: 25rem; }
+
+.go-back:hover,
+.go-forward:hover {
+    cursor: pointer;
+    border: 2px solid rgb(58, 11, 12);
+}
+
+.go-forward img{
+    transform: rotate(180deg);
+}
+
+/* Seção de cards */
+.cachacas-section {
+    display: flex;
+    gap: 1.5rem;
+    overflow: hidden;
+    max-width: 45rem;
+    padding: 1rem;
+}
+
+.cards {
+    flex: 0 0 calc(33.333% - 1rem); /* 3 cards visíveis por vez */
+    background-color: white;
+    border: 2px solid rgb(58, 9, 10);
+    padding: 1.25rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18rem;
+    min-width: 13rem;
+}
+
+.cards:hover{
+    box-shadow: 4px 4px 5px rgba(149, 145, 145, 0.2);
+}
+
+/* Fade-in apenas inicial */
+.cards.fade-in {
+    opacity: 0;
+    animation: fade-in 0.4s ease-in-out forwards;
+}
+
+/* Conteúdo do card */
+.cards img {
+    width: 100%;
+    height: 10.5rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+
+.cards span {
+    font-size: 1rem;
+    color: rgb(58, 9, 10);
+    font-weight: bold;
+}
+
+.ver-mais {
+    width: 100%;
+    padding: .75rem 1rem;
+    margin-top: .5rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: rgb(250, 246, 240);
+    color: rgb(58, 9, 10);
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+    text-align: center;
+}
+
+.ver-mais button{
+    border: none;
+    background-color: transparent;
+}
+
+.ver-mais:hover {
+    background-color: rgb(58, 11, 12);
+    transform: scale(1.1);
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+    color: white;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: rgb(58, 11, 12);
+}
+
+footer h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: .5rem;
+}
+
+.social a {
+    background-color: white;
+    width: 2.875rem;
+    height: 2.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 3px solid rgb(107, 70, 71);
+    transition: transform .1s ease-in-out;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    border-color: rgb(245, 184, 65);
+}
+
+.social img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
