@@ -46,7 +46,7 @@
         <a class="ver-mais" href="ribeirinha.php">Ver Mais</a>
       </div>
 
-      <div class="cards">
+      <!-- <div class="cards">
         <img src="assets/img/cachaca-ribeirinha.jpg" alt="Imagem da cachaça Ribeirinha">
         <span>Ribeirinha</span>
 
@@ -65,7 +65,7 @@
         <span>Ribeirinha</span>
 
         <a class="ver-mais" href="ribeirinha.php">Ver Mais</a>
-      </div>
+      </div> -->
     </section>
     <div class="go-forward">
       <img src="assets/icons/arrow-left.svg" alt="Icone seta pra direita">

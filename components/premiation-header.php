@@ -3,10 +3,8 @@
 
      <nav>
          <ul class="menu">
-             <a href="../../index.php">
-                 <li>Home</li>
-             </a>
-             <a href="#" onclick="history.go(-2); return false;">
+
+             <a href="#" onclick="history.go(-1); return false;">
                  <li>Voltar</li>
              </a>
          </ul>

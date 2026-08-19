@@ -9,6 +9,27 @@
     }
 }
 
+html,body{
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+main.smartphone{
+    display: none;
+}
+
+main{
+    flex: 1;
+}
+
+footer{
+    width: 100%;
+}
 /* Header */
 .header {
     height: 7rem;
@@ -64,16 +85,11 @@ main .container {
     height: 2.5rem;
     padding: .5rem;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 150px;
     z-index: 10;
 }
 
-.go-back { left: 25rem; }
+.go-back {left: 25rem;  }
 .go-forward { right: 25rem; }
 
 .go-back:hover,
@@ -82,9 +98,7 @@ main .container {
     border: 2px solid rgb(58, 11, 12);
 }
 
-.go-forward img{
-    transform: rotate(180deg);
-}
+
 
 /* Seção de cards */
 .cachacas-section {
@@ -161,7 +175,7 @@ main .container {
 
 /* Footer */
 footer {
-    margin-top: 3rem;
+    margin-top: 8px;
     padding: 1.5rem;
     background-color: rgb(58, 11, 12);
 }

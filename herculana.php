@@ -7,6 +7,7 @@
     <title>Página do Produto</title>
     <link rel="stylesheet" href="assets/css/cachaca-reset.css">
     <link rel="stylesheet" href="assets/css/cachaca.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
 
 </head>
 

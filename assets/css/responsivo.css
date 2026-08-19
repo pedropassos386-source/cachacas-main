@@ -1,0 +1,23 @@
+@media screen and (max-width:720px){
+
+/* Header */
+.header {
+   display: flex;
+   flex-direction: column;
+   height: 10rem;
+}
+
+.header nav .menu a {
+    background-color: rgb(58, 11, 12);
+    color: white;
+    border: 2px solid rgb(107, 70, 71);
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    transition: all .1s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.imagem-principal{
+    display: none;
+}
+}
