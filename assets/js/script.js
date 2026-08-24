@@ -108,3 +108,40 @@ mobile.addEventListener("change", (event) => {
 
 // inicia o carrossel
 updateCarousel();
+
+const frases = [
+    "Novo Cruzeiro: tradição em cada dose.",
+    "Sabores que contam a nossa história.",
+    "Conheça as cachaças da nossa terra.",
+    "Histórias que nascem nos alambiques.",
+    "Um brinde à cultura de Novo Cruzeiro.",
+    "Festival da Cachaça: tradição que atravessa gerações."
+];
+
+const texto = document.querySelector("#frase-dinamica");
+
+let fraseAtual = 0;
+
+function trocarFrase() {
+
+    // desaparece
+    texto.classList.add("fade-out");
+
+    setTimeout(() => {
+
+        // passa para a próxima frase
+        fraseAtual++;
+
+        if (fraseAtual >= frases.length) {
+            fraseAtual = 0;
+        }
+
+        texto.textContent = frases[fraseAtual];
+
+        // aparece novamente
+        texto.classList.remove("fade-out");
+
+    }, 500);
+}
+
+setInterval(trocarFrase, 6000);

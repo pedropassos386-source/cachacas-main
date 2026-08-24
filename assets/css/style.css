@@ -36,7 +36,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     padding-inline: 1rem;
     background-color: rgb(58, 11, 12);
 }
@@ -76,6 +76,80 @@ main .container {
     margin-bottom: 4rem;
     position: relative;
 }
+
+/* Menu inicial*/
+.container1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#frase-dinamica {
+    font-size: 2.5rem;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.apresentação {
+    font-size: 20px;
+    margin-top: 200px;
+    color: white;
+}
+
+.img-container{
+    background-image: url('../img/Estação---antiga-EFBM---9692.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    width: 100%;
+}
+
+.img-container::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* texto fica por cima da camada */
+#frase-dinamica {
+    position: relative;
+    z-index: 1;
+
+    color: #fff;
+
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+
+    max-width: 900px;
+
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        0 4px 12px rgba(0, 0, 0, 0.6);
+
+    line-height: 1.15;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Botões de navegação */
 .go-back,
