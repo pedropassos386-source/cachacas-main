@@ -85,7 +85,7 @@
 
         principal: {
             nome: "The Fevers",
-            horario: "22:30",
+            horario: "00:00",
             imagem: "./assets/img/artistas/artista-domingo.jpg"
         },
 
