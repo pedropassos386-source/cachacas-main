@@ -1,15 +1,28 @@
+/* =========================
+   ANIMAÇÕES
+========================= */
+
 @keyframes fade-in {
+
     from {
         opacity: 0;
         transform: translateX(25rem);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
     }
+
 }
 
-html,body{
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+html,
+body {
     min-height: 100%;
 }
 
@@ -18,273 +31,1362 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    background-color: rgb(250, 246, 240);
 }
-main.smartphone{
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
+main.smartphone {
     display: none;
 }
 
-main{
-    flex: 1;
-}
 
-footer{
-    width: 100%;
-}
-/* Header */
+/* =========================
+   HEADER
+========================= */
+
 .header {
+
+    width: 100%;
     height: 7rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 4rem; */
+
     padding-inline: 1rem;
+
     background-color: rgb(58, 11, 12);
-}
 
-.header img {
-    width: 6.4rem;
-}
-
-.header nav .menu {
-    display: flex;
-    gap: 1rem;
-}
-
-.header nav .menu a {
-    background-color: rgb(58, 11, 12);
-    color: white;
-    border: 2px solid rgb(107, 70, 71);
-    padding: .5rem 1rem;
-    border-radius: 1.5rem;
-    transition: all .1s ease-in-out;
-}
-
-.header nav .menu a:hover {
-    transform: scale(1.1);
-    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.2);
-    color: rgb(245, 184, 65);
-}
-
-.header nav .menu li {
-    font-size: 1.125rem;
-}
-
-/* Main e container */
-main .container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
     position: relative;
-}
-
-/* Menu inicial*/
-.container1{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#frase-dinamica {
-    font-size: 2.5rem;
-    transition: opacity 0.5s ease;
-}
-
-.fade-out {
-    opacity: 0;
-}
-
-.apresentação {
-    font-size: 20px;
-    margin-top: 200px;
-    color: white;
-}
-
-.img-container{
-    background-image: url('../img/Estação---antiga-EFBM---9692.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 800px;
-    width: 100%;
-}
-
-.img-container::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.35);
-}
-
-/* texto fica por cima da camada */
-#frase-dinamica {
-    position: relative;
-    z-index: 1;
-
-    color: #fff;
-
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 700;
-
-    max-width: 900px;
-
-    text-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.8),
-        0 4px 12px rgba(0, 0, 0, 0.6);
-
-    line-height: 1.15;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Botões de navegação */
-.go-back,
-.go-forward {
-    background-color: rgb(245, 184, 65);
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: .5rem;
-    border-radius: 50%;
-    margin-top: 150px;
     z-index: 10;
 }
 
-.go-back {left: 25rem;  }
-.go-forward { right: 25rem; }
+
+.header > img {
+
+    width: 6.4rem;
+
+}
+
+
+.header nav .menu {
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+
+.header nav .menu li {
+
+    list-style: none;
+
+}
+
+
+.header nav .menu a {
+
+    display: block;
+
+    padding: 0.5rem 1rem;
+
+    border: 2px solid rgb(107, 70, 71);
+
+    border-radius: 1.5rem;
+
+    background-color: rgb(58, 11, 12);
+
+    color: white;
+
+    font-size: 1.125rem;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.1s ease-in-out,
+        box-shadow 0.1s ease-in-out,
+        color 0.1s ease-in-out;
+}
+
+
+.header nav .menu a:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        4px 4px 5px
+        rgba(255, 255, 255, 0.2);
+
+    color: rgb(245, 184, 65);
+
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 600px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+/* IMAGEM DO BANNER */
+
+.banner > img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+
+}
+
+
+/* CAMADA ESCURA */
+
+.banner::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0, 0, 0, 0.38);
+
+    z-index: 1;
+
+}
+
+
+/* TEXTO DO BANNER */
+
+#frase-dinamica {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 800px;
+    max-width: 90%;
+
+    margin: 0 auto;
+
+    padding: 1rem;
+
+    color: white;
+
+    font-size:
+        clamp(2rem, 5vw, 4rem);
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 2px 4px
+        rgba(0, 0, 0, 0.9),
+
+        0 5px 15px
+        rgba(0, 0, 0, 0.8);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+}
+
+
+/* usado pelo JavaScript
+   para troca das frases */
+
+#frase-dinamica.fade-out {
+
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+}
+
+
+/* =========================
+   ÁREA DAS CACHAÇAS
+========================= */
+
+.cachacas-area {
+
+    width: 100%;
+
+    padding:
+        4rem 1rem;
+
+    background-color:
+        rgb(250, 246, 240);
+
+}
+
+
+/* =========================
+   TÍTULO DA SEÇÃO
+========================= */
+
+.titulo-cachacas {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin:
+        0 auto 2.5rem;
+
+    text-align: center;
+
+}
+
+
+.titulo-cachacas h2 {
+
+    margin-bottom: 0.75rem;
+
+    color:
+        rgb(58, 11, 12);
+
+    font-size:
+        clamp(1.8rem, 4vw, 2.5rem);
+
+}
+
+
+.titulo-cachacas p {
+
+    color:
+        rgb(80, 80, 80);
+
+    font-size: 1.1rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================
+   CONTAINER DO CARROSSEL
+========================= */
+
+.cachacas-area .container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin: 0 auto;
+
+
+}
+
+
+/* =========================
+   BOTÕES DE NAVEGAÇÃO
+========================= */
+
+.go-back,
+.go-forward {
+
+    flex-shrink: 0;
+
+    width: 2.8rem;
+    height: 2.8rem;
+
+    padding: 0.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid transparent;
+
+    border-radius: 50%;
+
+    background-color:
+        rgb(245, 184, 65);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+
+}
+
+
+.go-back img,
+.go-forward img {
+
+    width: 100%;
+    height: 100%;
+
+}
+
 
 .go-back:hover,
 .go-forward:hover {
-    cursor: pointer;
-    border: 2px solid rgb(58, 11, 12);
+
+    transform: scale(1.1);
+
+    border-color:
+        rgb(58, 11, 12);
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, 0.2);
+
 }
 
 
+/* =========================
+   SEÇÃO DOS CARDS
+========================= */
 
-/* Seção de cards */
 .cachacas-section {
+
     display: flex;
+
     gap: 1.5rem;
+
     overflow: hidden;
+
     max-width: 45rem;
+
     padding: 1rem;
+
 }
+
+
+/* =========================
+   CARDS
+========================= */
 
 .cards {
-    flex: 0 0 calc(33.333% - 1rem); /* 3 cards visíveis por vez */
-    background-color: white;
-    border: 2px solid rgb(58, 9, 10);
-    padding: 1.25rem 1rem;
-    border-radius: 1rem;
+
+    flex:
+        0 0
+        calc(33.333% - 1rem);
+
+    min-width: 13rem;
+
+    height: 18rem;
+
+    padding:
+        1.25rem 1rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 18rem;
-    min-width: 13rem;
-}
 
-.cards:hover{
-    box-shadow: 4px 4px 5px rgba(149, 145, 145, 0.2);
-}
+    border:
+        2px solid
+        rgb(58, 9, 10);
 
-/* Fade-in apenas inicial */
-.cards.fade-in {
-    opacity: 0;
-    animation: fade-in 0.4s ease-in-out forwards;
-}
-
-/* Conteúdo do card */
-.cards img {
-    width: 100%;
-    height: 10.5rem;
-    object-fit: cover;
     border-radius: 1rem;
-    margin-bottom: .5rem;
+
+    background-color: white;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+
 }
+
+
+.cards:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        4px 4px 10px
+        rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================
+   ANIMAÇÃO DOS CARDS
+========================= */
+
+.cards.fade-in {
+
+    opacity: 0;
+
+    animation:
+        fade-in
+        0.4s
+        ease-in-out
+        forwards;
+
+}
+
+
+/* =========================
+   IMAGEM DOS CARDS
+========================= */
+
+.cards > img {
+
+    width: 100%;
+
+    height: 10.5rem;
+
+    object-fit: cover;
+
+    border-radius: 1rem;
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+/* =========================
+   NOME DA CACHAÇA
+========================= */
 
 .cards span {
+
+    color:
+        rgb(58, 9, 10);
+
     font-size: 1rem;
-    color: rgb(58, 9, 10);
+
     font-weight: bold;
+
+    text-align: center;
+
 }
+
+
+/* =========================
+   BOTÃO VER MAIS
+========================= */
 
 .ver-mais {
+
     width: 100%;
-    padding: .75rem 1rem;
-    margin-top: .5rem;
+
+    margin-top: 0.5rem;
+
+    padding:
+        0.75rem 1rem;
+
     border: none;
+
     border-radius: 1.5rem;
-    background-color: rgb(250, 246, 240);
-    color: rgb(58, 9, 10);
+
+    background-color:
+        rgb(250, 246, 240);
+
+    color:
+        rgb(58, 9, 10);
+
     font-weight: bold;
-    transition: all 0.1s ease-in-out;
+
     text-align: center;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        color 0.15s ease;
+
 }
 
-.ver-mais button{
-    border: none;
-    background-color: transparent;
-}
 
 .ver-mais:hover {
-    background-color: rgb(58, 11, 12);
-    transform: scale(1.1);
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.5);
-    cursor: pointer;
+
+    background-color:
+        rgb(58, 11, 12);
+
     color: white;
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        4px 4px 5px
+        rgba(0, 0, 0, 0.3);
+
 }
 
-/* Footer */
-footer {
-    margin-top: 8px;
-    padding: 1.5rem;
-    background-color: rgb(58, 11, 12);
+
+/* ==========================================
+   FESTIVAL DA CACHAÇA
+========================================== */
+
+.festival-section {
+
+    width: 100%;
+
+    padding: 5rem 1.5rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(38, 5, 7),
+            rgb(58, 11, 12),
+            rgb(81, 20, 18)
+        );
+
+    color: white;
+
+    overflow: hidden;
 }
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.festival-header {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin:
+        0 auto 3rem;
+
+    text-align: center;
+}
+
+
+.festival-subtitulo {
+
+    display: inline-block;
+
+    margin-bottom: 0.8rem;
+
+    color:
+        rgb(245, 184, 65);
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.2rem;
+}
+
+
+.festival-header h2 {
+
+    margin-bottom: 1rem;
+
+    color: white;
+
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    line-height: 1.1;
+}
+
+
+.festival-header p {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   BOTÕES DOS DIAS
+========================================== */
+
+.festival-days {
+
+    max-width: 900px;
+
+    margin:
+        0 auto 2.5rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    flex-wrap: wrap;
+}
+
+
+.festival-day {
+
+    min-width: 120px;
+
+    padding:
+        0.8rem 1.4rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 2rem;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.festival-day span {
+
+    font-size: 1rem;
+
+    font-weight: bold;
+}
+
+
+.festival-day small {
+
+    margin-top: 0.15rem;
+
+    color:
+        rgba(255, 255, 255, 0.6);
+
+    font-size: 0.7rem;
+}
+
+
+.festival-day:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgb(245, 184, 65);
+}
+
+
+.festival-day.active {
+
+    background:
+        rgb(245, 184, 65);
+
+    border-color:
+        rgb(245, 184, 65);
+
+    color:
+        rgb(58, 11, 12);
+}
+
+
+.festival-day.active small {
+
+    color:
+        rgba(58, 11, 12, 0.7);
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.festival-showcase {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    min-height: 500px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 0.8fr;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 1.5rem;
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==========================================
+   ATRAÇÃO PRINCIPAL
+========================================== */
+
+.festival-main {
+
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+}
+
+
+.festival-main > img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.8s ease,
+        opacity 0.4s ease;
+}
+
+
+.festival-main-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 2, 3, 0.98) 0%,
+            rgba(15, 2, 3, 0.65) 40%,
+            rgba(15, 2, 3, 0.15) 80%
+        );
+}
+
+
+.festival-main-content {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding:
+        2.5rem;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.festival-badge {
+
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    padding:
+        0.45rem 0.9rem;
+
+    border-radius: 2rem;
+
+    background:
+        rgb(245, 184, 65);
+
+    color:
+        rgb(58, 11, 12);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05rem;
+}
+
+
+.festival-current-day {
+
+    margin-bottom: 0.3rem;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 1rem;
+}
+
+
+.festival-main-content h3 {
+
+    max-width: 650px;
+
+    margin-bottom: 1.2rem;
+
+    color: white;
+
+    font-size:
+        clamp(2rem, 5vw, 4rem);
+
+    line-height: 1;
+}
+
+
+/* ==========================================
+   HORÁRIO
+========================================== */
+
+.festival-time {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+
+    padding:
+        0.6rem 1rem;
+
+    border-left:
+        3px solid
+        rgb(245, 184, 65);
+
+    background:
+        rgba(0, 0, 0, 0.3);
+}
+
+
+.festival-time span {
+
+    color:
+        rgba(255, 255, 255, 0.7);
+}
+
+
+.festival-time strong {
+
+    color:
+        rgb(245, 184, 65);
+
+    font-size: 1.3rem;
+}
+
+
+/* ==========================================
+   OUTRAS ATRAÇÕES
+========================================== */
+
+.festival-other-shows {
+
+    padding:
+        2.5rem 2rem;
+
+    background:
+        rgba(26, 3, 5, 0.75);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.festival-other-header {
+
+    margin-bottom: 2rem;
+}
+
+
+.festival-other-header > span {
+
+    color:
+        rgb(245, 184, 65);
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15rem;
+}
+
+
+.festival-other-header h3 {
+
+    margin-top: 0.5rem;
+
+    color: white;
+
+    font-size: 1.5rem;
+}
+
+
+/* ==========================================
+   LISTA DE SHOWS
+========================================== */
+
+.festival-lineup {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.9rem;
+}
+
+
+.festival-artist {
+
+    padding:
+        1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 0.8rem;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    opacity: 0;
+
+    transform:
+        translateX(25px);
+
+    animation:
+        festivalArtistEntry
+        0.45s ease
+        forwards;
+}
+
+
+.festival-artist:hover {
+
+    border-color:
+        rgba(245, 184, 65, 0.5);
+
+    background:
+        rgba(245, 184, 65, 0.08);
+}
+
+
+.festival-artist-name {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.2rem;
+}
+
+
+.festival-artist-name strong {
+
+    color: white;
+
+    font-size: 1rem;
+}
+
+
+.festival-artist-name span {
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 0.75rem;
+}
+
+
+.festival-artist-time {
+
+    color:
+        rgb(245, 184, 65);
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   ANIMAÇÃO DOS ARTISTAS
+========================================== */
+
+@keyframes festivalArtistEntry {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   TROCA DO DIA
+========================================== */
+
+.festival-showcase.is-changing
+.festival-main-content {
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+}
+
+
+.festival-showcase.is-changing
+.festival-main > img {
+
+    opacity: 0.4;
+
+    transform:
+        scale(1.04);
+}
+
+
+/* ==========================================
+   INDICADORES
+========================================== */
+
+.festival-indicators {
+
+    margin-top: 2rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 0.6rem;
+}
+
+
+.festival-indicator {
+
+    width: 9px;
+
+    height: 9px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.3);
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        border-radius 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.festival-indicator.active {
+
+    width: 28px;
+
+    border-radius: 1rem;
+
+    background:
+        rgb(245, 184, 65);
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE FESTIVAL
+========================================== */
+
+@media (max-width: 850px) {
+
+    .festival-showcase {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .festival-main {
+
+        min-height: 450px;
+
+    }
+
+
+    .festival-other-shows {
+
+        padding:
+            2rem 1.5rem;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .festival-section {
+
+        padding:
+            4rem 1rem;
+
+    }
+
+
+    .festival-days {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .festival-day {
+
+        width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    .festival-main {
+
+        min-height: 420px;
+
+    }
+
+
+    .festival-main-content {
+
+        padding:
+            1.5rem;
+
+    }
+
+
+    .festival-main-content h3 {
+
+        font-size:
+            clamp(2rem, 10vw, 3rem);
+
+    }
+
+
+    .festival-other-shows {
+
+        padding:
+            2rem 1rem;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    width: 100%;
+
+    margin-top: 0;
+
+    padding: 1.5rem;
+
+    background-color:
+        rgb(58, 11, 12);
+
+}
+
 
 footer h2 {
-    text-align: center;
+
     margin-bottom: 1.5rem;
+
     color: white;
+
+    text-align: center;
+
 }
+
+
+/* =========================
+   REDES SOCIAIS
+========================= */
 
 .social {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding-block: .5rem;
-}
 
-.social a {
-    background-color: white;
-    width: 2.875rem;
-    height: 2.875rem;
     display: flex;
+
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
-    border: 3px solid rgb(107, 70, 71);
-    transition: transform .1s ease-in-out;
+
+    gap: 1rem;
+
+    padding-block: 0.5rem;
+
 }
+
+
+.social a {
+
+    width: 2.875rem;
+    height: 2.875rem;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border:
+        3px solid
+        rgb(107, 70, 71);
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease;
+
+}
+
 
 .social a:hover {
-    transform: scale(1.1);
-    border-color: rgb(245, 184, 65);
+
+    transform:
+        scale(1.1);
+
+    border-color:
+        rgb(245, 184, 65);
+
 }
 
+
 .social img {
+
     width: 1.5rem;
+
     height: 1.5rem;
+
 }

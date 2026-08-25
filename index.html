@@ -1,122 +1,432 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Cachaças Novo Cruzeiro</title>
+
   <link rel="stylesheet" href="assets/css/reset.css">
+
   <link rel="stylesheet" href="assets/css/style.css">
+
   <link rel="stylesheet" href="assets/css/responsivo.css">
 </head>
 
 <body>
+
+  <!-- =========================
+         HEADER
+    ========================== -->
+
   <header class="header">
-    <img src="./assets/img/logo.png" alt="Logo">
+
+    <img src="./assets/img/logo.png" alt="Logo Cachaças Novo Cruzeiro">
 
     <nav>
       <ul class="menu">
-        <a href="../cachacas-main/index.html">
-          <li>Home</li>
-        </a>
-        <a href="../cachacas-main/pages/premiation/premiation.php">
-          <li>Premiações</li>
-        </a>
+
+        <li>
+          <a href="../cachacas-main/index.html">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="../cachacas-main/pages/premiation/premiation.php">
+            Premiações
+          </a>
+        </li>
+
       </ul>
     </nav>
+
   </header>
 
-  
+
+  <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
 
   <main class="desktop">
-    
-      <div class=" container1 img-container">
-        <section>
-          <div id="frase-dinamica" class="apresentação">
-            <p>Seja Bem Vindo ao Portal das Cachaças</p>
-            <p>De Novo Cruzeiro MG</p>
-          </div>
+
+    <!-- =========================
+             BANNER
+        ========================== -->
+
+    <section class="banner">
+
+      <img src="./assets/img/Estação---antiga-EFBM---9692.jpg" alt="Estação antiga de Novo Cruzeiro">
+
+      <h1 id="frase-dinamica">
+        Seja Bem Vindo ao Portal das Cachaças
+      </h1>
+
+    </section>
+
+
+    <!-- =========================
+             SEÇÃO DAS CACHAÇAS
+        ========================== -->
+
+    <section class="cachacas-area">
+
+      <div class="titulo-cachacas">
+
+        <h2>
+          Conheça as Cachaças de Novo Cruzeiro
+        </h2>
+
+        <p>
+          Conheça um pouco das cachaças produzidas em nossa terra.
+        </p>
+
+      </div>
+
+
+      <div class="container">
+
+        <!-- SETA ESQUERDA -->
+
+        <button class="go-back" type="button" aria-label="Ver cachaças anteriores">
+
+          <img src="../cachacas-main/assets/icons/arrow-left.svg" alt="">
+
+        </button>
+
+
+        <!-- CARDS -->
+
+        <section class="cachacas-section">
+
+          <!-- BORALINA -->
+
+          <article class="cards" style="--i: 1" id="cachacas">
+
+            <img src="./assets/img/cachaca-boralina.webp" alt="Imagem da cachaça Boralina">
+
+            <span>
+              Boralina
+            </span>
+
+            <a class="ver-mais" href="./boralina.php">
+              Ver Mais
+            </a>
+
+          </article>
+
+
+          <!-- NOVA FONTE -->
+
+          <article class="cards" style="--i: 2">
+
+            <img src="./assets/img/cachaça-nova-fonte.jpg" alt="Imagem da cachaça Nova Fonte">
+
+            <span>
+              Nova Fonte
+            </span>
+
+            <a class="ver-mais" href="nova-fonte.php">
+              Ver Mais
+            </a>
+
+          </article>
+
+
+          <!-- HERCULANA -->
+
+          <article class="cards" style="--i: 3">
+
+            <img src="./assets/img/cachaca-herculana.webp" alt="Imagem da cachaça Herculana">
+
+            <span>
+              Herculana
+            </span>
+
+            <a class="ver-mais" href="./herculana.php">
+              Ver Mais
+            </a>
+
+          </article>
+
+
+          <!-- FORMOSINHA -->
+
+          <article class="cards" style="--i: 4">
+
+            <img src="./assets/img/cachaca-formosinha.jpg" alt="Imagem da cachaça Formosinha">
+
+            <span>
+              Formosinha
+            </span>
+
+            <a class="ver-mais" href="./formosinha.php">
+              Ver Mais
+            </a>
+
+          </article>
+
+
+          <!-- CARVALHO DE MINAS -->
+
+          <article class="cards" style="--i: 5">
+
+            <img src="./assets/img/cachaca-carvalho-de-minas.jpg" alt="Imagem da cachaça Carvalho de Minas">
+
+            <span>
+              Carvalho de Minas
+            </span>
+
+            <a class="ver-mais" href="./carvalho-minas.php">
+              Ver Mais
+            </a>
+
+          </article>
+
+
+          <!-- RIBEIRINHA -->
+
+          <article class="cards" style="--i: 6">
+
+            <img src="./assets/img/cachaca-ribeirinha.jpg" alt="Imagem da cachaça Ribeirinha">
+
+            <span>
+              Ribeirinha
+            </span>
+
+            <a class="ver-mais" href="./ribeirinha.php">
+              Ver Mais
+            </a>
+
+          </article>
+
         </section>
+
+
+        <!-- SETA DIREITA -->
+
+        <button class="go-forward" type="button" aria-label="Ver próximas cachaças">
+
+          <img src="../cachacas-main/assets/icons/arrow-right.svg" alt="">
+
+        </button>
+
       </div>
-    
 
-    <div class="container">
-     
-      <div class="go-back">
-        <img src="../cachacas-main/assets/icons/arrow-left.svg" alt="Icone seta pra esquerda">
-      </div>
+    </section>
 
-      <section class="cachacas-section">
-        <div class="cards" style="--i: 1" id="cachacas">
-          <img src="./assets/img/cachaca-boralina.webp" alt="Imagem da cachaça boralina">
-          <span>Boralina</span>
+   <!-- =========================
+     31º FESTIVAL DA CACHAÇA
+========================== -->
 
-          <a class="ver-mais" href="./boralina.php">Ver Mais</a>
-        </div>
+<section class="festival-section" id="festival">
 
-        <div class="cards" style="--i: 2">
-          <img src="./assets/img/cachaça-nova-fonte.jpg" alt="Imagem da cachaça boralina">
-          <span>Nova Fonte</span>
+    <div class="festival-header">
 
-          <a class="ver-mais" href="nova-fonte.php">Ver Mais</a>
-        </div>
+        <span class="festival-subtitulo">
+            Eventos & Cultura
+        </span>
 
-        <div class="cards" style="--i: 3">
-          <img src="./assets/img/cachaca-herculana.webp" alt="Imagem da cachaça boralina">
-          <span>Herculana</span>
+        <h2>
+            31º Festival da Cachaça
+        </h2>
 
-          <a class="ver-mais" href="./herculana.php">Ver
-            Mais</a>
-        </div>
+        <p>
+            Música, cultura e tradição se encontram em uma das
+            maiores celebrações de Novo Cruzeiro.
+        </p>
 
-        <div class="cards" style="--i: 4">
-          <img src="./assets/img/cachaca-formosinha.jpg" alt="Imagem da cachaça boralina">
-          <span>Formosinha</span>
-
-          <a class="ver-mais" href="./formosinha.php">Ver Mais</a>
-        </div>
-
-        <div class="cards" style="--i: 5">
-          <img src="./assets/img/cachaca-carvalho-de-minas.jpg" alt="Imagem da cachaça boralina">
-          <span>Carvalho de Minas</span>
-
-          <a class="ver-mais" href="./carvalho-minas.php">Ver Mais</a>
-        </div>
-
-        <div class="cards" style="--i: 5">
-          <img src="./assets/img/cachaca-ribeirinha.jpg" alt="Imagem da cachaça boralina">
-          <span>Ribeirinha</span>
-
-          <a class="ver-mais" href="./ribeirinha.php">Ver Mais</a>
-        </div>
-      </section>
-
-      <div class="go-forward">
-        <img src="../cachacas-main/assets/icons/arrow-right.svg" alt="Icone seta pra direita">
-      </div>
     </div>
+
+
+    <!-- DIAS DO FESTIVAL -->
+
+    <div
+    class="festival-days"
+    role="tablist"
+    aria-label="Dias do Festival da Cachaça"
+>
+
+    <button
+        class="festival-day active"
+        type="button"
+        data-festival-index="0"
+    >
+        <span>Sexta</span>
+        <small>1º dia</small>
+    </button>
+
+    <button
+        class="festival-day"
+        type="button"
+        data-festival-index="1"
+    >
+        <span>Sábado</span>
+        <small>2º dia</small>
+    </button>
+
+    <button
+        class="festival-day"
+        type="button"
+        data-festival-index="2"
+    >
+        <span>Domingo</span>
+        <small>3º dia</small>
+    </button>
+
+</div>
+
+    <!-- PROGRAMAÇÃO -->
+
+    <div
+        class="festival-showcase"
+        id="festival-showcase"
+        aria-live="polite"
+    >
+
+        <!-- ATRAÇÃO PRINCIPAL -->
+
+        <div class="festival-main">
+
+            <img
+                id="festival-main-image"
+                src="./assets/img/artistas/artista-quinta.jpg"
+                alt="Atração principal do primeiro dia do festival"
+            >
+
+            <div class="festival-main-overlay"></div>
+
+
+            <div class="festival-main-content">
+
+                <span class="festival-badge">
+                    ★ Atração principal
+                </span>
+
+                <p
+                    class="festival-current-day"
+                    id="festival-current-day"
+                >
+                    Quinta-feira
+                </p>
+
+                <h3 id="festival-main-name">
+                    Nome do Artista Principal
+                </h3>
+
+                <div class="festival-time">
+
+                    <span>
+                        Show
+                    </span>
+
+                    <strong id="festival-main-time">
+                        23:30
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OUTRAS ATRAÇÕES -->
+
+        <div class="festival-other-shows">
+
+            <div class="festival-other-header">
+
+                <span>
+                    Programação
+                </span>
+
+                <h3>
+                    Outros shows da noite
+                </h3>
+
+            </div>
+
+
+            <div
+                class="festival-lineup"
+                id="festival-lineup"
+            >
+
+                <!-- JavaScript coloca os artistas aqui -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INDICADORES -->
+<div class="festival-indicators">
+
+    <button
+        class="festival-indicator active"
+        type="button"
+        data-festival-index="0"
+        aria-label="Ver sexta-feira"
+    ></button>
+
+    <button
+        class="festival-indicator"
+        type="button"
+        data-festival-index="1"
+        aria-label="Ver sábado"
+    ></button>
+
+    <button
+        class="festival-indicator"
+        type="button"
+        data-festival-index="2"
+        aria-label="Ver domingo"
+    ></button>
+
+</div>
+
+</section>
+
   </main>
 
 
+  <!-- =========================
+         FOOTER
+    ========================== -->
+
   <footer>
-    <h2>Siga-nos em nossas redes</h2>
+
+    <h2>
+      Siga-nos em nossas redes
+    </h2>
 
     <nav class="social">
+
       <a href="#">
-        <img src="./assets/icons/instagram.svg" alt="Icone instagram">
+        <img src="./assets/icons/instagram.svg" alt="Instagram">
       </a>
 
       <a href="#">
-        <img src="./assets/icons/whatsapp.svg" alt="Icone Whatsapp">
+        <img src="./assets/icons/whatsapp.svg" alt="WhatsApp">
       </a>
 
       <a href="#">
-        <img src="./assets/icons/titok.svg" alt="Icone Tiktok">
+        <img src="./assets/icons/titok.svg" alt="TikTok">
       </a>
+
     </nav>
+
   </footer>
 
+
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/eventos.js"></script>
+
 </body>
 
 </html>
