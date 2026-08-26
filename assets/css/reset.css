@@ -5,6 +5,8 @@
     font-family: "Poppins", sans-serif !important; 
 }
 
+button { font: inherit; }
+
 html{
     scroll-behavior: smooth;
 }

@@ -1,12 +1,11 @@
+ <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
  <header id="home">
-     <img src="../../assets/img/logo.png" alt="Logo">
+     <a href="../../index.html" aria-label="Cachaças de Novo Cruzeiro — página inicial"><img src="../../assets/img/logo.png" alt="Cachaças Novo Cruzeiro" width="500" height="500"></a>
 
      <nav>
          <ul class="menu">
 
-             <a href="#" onclick="history.go(-1); return false;">
-                 <li>Voltar</li>
-             </a>
+             <li><a href="../../index.html">Home</a></li>
          </ul>
      </nav>
  </header>

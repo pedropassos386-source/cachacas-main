@@ -24,6 +24,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.skip-link { position: fixed; top: .75rem; left: .75rem; z-index: 100; padding: .75rem 1rem; border-radius: .35rem; background: rgb(245, 184, 65); color: rgb(58, 11, 12); font-weight: 700; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+:where(a, button):focus-visible { outline: 3px solid rgb(245, 184, 65); outline-offset: 3px; }
+
 @keyframes change-color {
     from {
         color: rgb(58, 9, 10);
@@ -58,7 +62,8 @@ header {
 
 
     & img {
-        width: 6.4rem;
+        width:100px;
+        height:100px;
     }
 
     nav .menu {
@@ -258,4 +263,16 @@ footer {
         }
     }
 
+}
+
+@media (max-width: 900px) {
+    main .premiacoes-container { width: 100%; }
+    main .premiacoes-container .premiacoes > div { flex-wrap: wrap; justify-content: center; }
+    main .premiacoes-container .premiacoes .premiacoes-card { width: min(25rem, calc(100vw - 2rem)); }
+    .descricao-concursos .concursos p { width: 100%; font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    main .premiacoes-container .premiacoes .premiacoes-card { opacity: 1; }
 }

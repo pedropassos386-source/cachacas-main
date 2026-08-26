@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página do Produto</title>
+    <title>Cachaça Nova Fonte | Novo Cruzeiro, MG</title>
+    <meta name="description" content="Conheça a história e as características da Cachaça Nova Fonte de Novo Cruzeiro, Minas Gerais.">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/cachaca-reset.css">
     <link rel="stylesheet" href="assets/css/cachaca.css">
     <link rel="stylesheet" href="assets/css/responsivo.css">
@@ -15,7 +17,8 @@
     require './components/cachacas-header.php';
    ?>
 
-    <main>
+    <main id="conteudo-principal">
+        <h1 class="product-title">Cachaça Nova Fonte</h1>
         <div class="container">
             <div class="mini-imagens">
                 <div class="mini-imagem">
@@ -27,7 +30,7 @@
                 </div>
 
                 <div class="cachacas-social">
-                    <a class="instagram" href="https://www.instagram.com/cachaca_nova_fonte/" target="_blank">
+                    <a class="instagram" href="https://www.instagram.com/cachaca_nova_fonte/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Cachaça Nova Fonte (abre em nova aba)">
                         <img class="instagram-icon" src="assets/icons/instagram.svg" alt="Icone instagram">
                     </a>
                 </div>
@@ -49,8 +52,8 @@
         </div>
     </main>
 
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/zoom.js"></script>
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/zoom.js" defer></script>
 </body>
 
 </html>

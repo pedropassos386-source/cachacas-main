@@ -1,14 +1,10 @@
  <header class="header">
-    <img src="assets/img/logo.png" alt="Logo">
+    <img src="assets/img/logo.png" alt="Cachaças Novo Cruzeiro" width="500" height="500">
 
     <nav>
       <ul class="menu">
-        <a href="#">
-          <li>Home</li>
-        </a>
-        <a href="#cachacas">
-          <li>Cachaças</li>
-        </a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#cachacas">Cachaças</a></li>
       </ul>
     </nav>
   </header>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página do Produto</title>
+    <title>Cachaça Herculana | Novo Cruzeiro, MG</title>
+    <meta name="description" content="Conheça a tradição e as características da Cachaça Herculana de Novo Cruzeiro, Minas Gerais.">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/cachaca-reset.css">
     <link rel="stylesheet" href="assets/css/cachaca.css">
     <link rel="stylesheet" href="assets/css/responsivo.css">
@@ -16,7 +18,8 @@
     require './components/cachacas-header.php';
    ?>
 
-    <main>
+    <main id="conteudo-principal">
+        <h1 class="product-title">Cachaça Herculana</h1>
         <div class="container">
             <div class="mini-imagens">
                 <div class="mini-imagem">
@@ -24,14 +27,14 @@
                 </div>
 
                 <div class="cachacas-social">
-                    <a class="instagram">
+                    <span class="instagram" aria-hidden="true">
                         <img class="instagram-icon" src="assets/icons/instagram.svg" alt="Icone instagram">
-                    </a>
+                    </span>
                 </div>
             </div>
 
             <div class="imagem-principal">
-                <img src="assets/img/cachaca-herculana.webp" alt="imagem principal boralina" id="img">
+                <img src="assets/img/cachaca-herculana.webp" alt="Garrafa da Cachaça Herculana" id="img">
             </div>
 
             <section class="description">
@@ -58,6 +61,7 @@
 
 
 
-    <script src="assets/js/zoom.js"></script> 
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/zoom.js" defer></script>
 </body>
 </html>

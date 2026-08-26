@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premiações da Cachaça Boralina</title>
+    <title>Premiações das Cachaças de Novo Cruzeiro, MG</title>
+    <meta name="description" content="Conheça premiações e reconhecimentos das cachaças de Novo Cruzeiro, Minas Gerais.">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="../../assets/css/premiations.css">
 </head>
 
@@ -17,7 +19,7 @@
         <h1>Premiações das Cachaças🏆</h1>
     </div>
 
-    <main>
+    <main id="conteudo-principal">
         <div class="container">
             <div class="premiacoes-container">
                 <div class="premiacoes">
@@ -170,7 +172,7 @@
     <footer>
         <span>Copyright © 2023 - Todos os direitos reservados</span>
         <a href="#home">
-            <img src="../../assets/icons/arrow-up.svg" alt="Imagem da seta">
+            <span aria-hidden="true">↑</span>
         </a>
     </footer>
 </body>

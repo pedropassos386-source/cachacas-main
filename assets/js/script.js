@@ -1,258 +1,64 @@
-const section = document.querySelector(".cachacas-section");
-
-const cards = Array.from(
-    section.querySelectorAll(".cards")
-);
-
-const next = document.querySelector(".go-forward");
-const prev = document.querySelector(".go-back");
-
-let currentIndex = 0;
-let carouselInterval;
-
-const AUTO_DELAY = 4000;
-
-
-/* ==========================================
-   QUANTIDADE DE CARDS VISÍVEIS
-========================================== */
-
-function getCardsPerPage() {
-
-    if (window.innerWidth <= 600) {
-        return 1;
-    }
-
-    if (window.innerWidth <= 900) {
-        return 2;
-    }
-
-    return 4;
-}
-
-
-/* ==========================================
-   ATUALIZAR CARROSSEL
-========================================== */
-
-function updateCarousel() {
-
-    const cardsPerPage = getCardsPerPage();
-
-    /* esconde todos */
-
-    cards.forEach(card => {
-
-        card.style.display = "none";
-
-        card.classList.remove("fade-in");
-
-    });
-
-
-    /*
-     Mostra a quantidade necessária.
-     O % faz o carrossel voltar para
-     o início automaticamente.
-    */
-
-    for (let i = 0; i < cardsPerPage; i++) {
-
-        const cardIndex =
-            (currentIndex + i) % cards.length;
-
-        const card = cards[cardIndex];
-
-        card.style.display = "flex";
-
-        card.style.animationDelay =
-            `${i * 0.1}s`;
-
-        void card.offsetHeight;
-
-        card.classList.add("fade-in");
-
-    }
-
-}
-
-
-/* ==========================================
-   PRÓXIMA CACHAÇA
-========================================== */
-
-function nextCard() {
-
-    currentIndex =
-        (currentIndex + 1) % cards.length;
-
-    updateCarousel();
-
-}
-
-
-/* ==========================================
-   CACHAÇA ANTERIOR
-========================================== */
-
-function previousCard() {
-
-    currentIndex =
-        (currentIndex - 1 + cards.length)
-        % cards.length;
-
-    updateCarousel();
-
-}
-
-
-/* ==========================================
-   TROCA AUTOMÁTICA
-========================================== */
-
-function startCarousel() {
-
-    clearInterval(carouselInterval);
-
-    carouselInterval = setInterval(
-        nextCard,
-        AUTO_DELAY
-    );
-
-}
-
-
-/* ==========================================
-   SETA DIREITA
-========================================== */
-
-next.addEventListener("click", () => {
-
-    nextCard();
-
-    startCarousel();
-
-});
-
-
-/* ==========================================
-   SETA ESQUERDA
-========================================== */
-
-prev.addEventListener("click", () => {
-
-    previousCard();
-
-    startCarousel();
-
-});
-
-
-/* ==========================================
-   PAUSA AO PASSAR O MOUSE
-========================================== */
-
-section.addEventListener("mouseenter", () => {
-
-    clearInterval(carouselInterval);
-
-});
-
-
-section.addEventListener("mouseleave", () => {
-
-    startCarousel();
-
-});
-
-
-/* ==========================================
-   RESPONSIVIDADE
-========================================== */
-
-window.addEventListener("resize", () => {
-
-    updateCarousel();
-
-});
-
-
-/* ==========================================
-   INICIAR
-========================================== */
-
-updateCarousel();
-
-startCarousel();
-
-
-
-/* ==========================================
-   FRASES DO BANNER
-========================================== */
-
-const frases = [
-
-    "Novo Cruzeiro: tradição em cada dose.",
-
-    "Sabores que contam a nossa história.",
-
-    "Conheça as cachaças da nossa terra.",
-
-    "Histórias que nascem nos alambiques.",
-
-    "Um brinde à cultura de Novo Cruzeiro.",
-
-    "Festival da Cachaça: tradição que atravessa gerações."
-
-];
-
-
-const texto = document.querySelector(
-    "#frase-dinamica"
-);
-
-
-let fraseAtual = 0;
-
-
-/* ==========================================
-   TROCAR FRASE
-========================================== */
-
-function trocarFrase() {
-
-    texto.classList.add("fade-out");
-
-
-    setTimeout(() => {
-
-        fraseAtual++;
-
-
-        if (fraseAtual >= frases.length) {
-
-            fraseAtual = 0;
-
+(() => {
+    "use strict";
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function initCarousel() {
+        const section = document.querySelector(".cachacas-section");
+        const next = document.querySelector(".go-forward");
+        const previous = document.querySelector(".go-back");
+        if (!section || !next || !previous) return;
+        const cards = Array.from(section.querySelectorAll(".cards"));
+        if (!cards.length) return;
+        let currentIndex = 0;
+        let intervalId;
+        let resizeFrame;
+        const cardsPerPage = () => window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 4;
+
+        function update() {
+            const visible = Math.min(cardsPerPage(), cards.length);
+            cards.forEach((card) => { card.hidden = true; card.classList.remove("fade-in"); });
+            for (let offset = 0; offset < visible; offset += 1) {
+                const card = cards[(currentIndex + offset) % cards.length];
+                card.hidden = false;
+                if (!reducedMotion.matches) card.classList.add("fade-in");
+            }
         }
+        const move = (direction) => { currentIndex = (currentIndex + direction + cards.length) % cards.length; update(); };
+        const stop = () => { window.clearInterval(intervalId); intervalId = undefined; };
+        const start = () => {
+            stop();
+            if (!reducedMotion.matches && !document.hidden) intervalId = window.setInterval(() => move(1), 4000);
+        };
+        next.addEventListener("click", () => { move(1); start(); });
+        previous.addEventListener("click", () => { move(-1); start(); });
+        section.addEventListener("mouseenter", stop);
+        section.addEventListener("mouseleave", start);
+        section.addEventListener("focusin", stop);
+        section.addEventListener("focusout", start);
+        document.addEventListener("visibilitychange", start);
+        reducedMotion.addEventListener("change", start);
+        window.addEventListener("resize", () => {
+            window.cancelAnimationFrame(resizeFrame);
+            resizeFrame = window.requestAnimationFrame(update);
+        }, { passive: true });
+        update();
+        start();
+    }
 
-
-        texto.textContent =
-            frases[fraseAtual];
-
-
-        texto.classList.remove(
-            "fade-out"
-        );
-
-    }, 500);
-
-}
-
-
-/* Troca de frase a cada 6 segundos */
-
-setInterval(
-    trocarFrase,
-    6000
-);
+    function initBannerPhrases() {
+        const text = document.querySelector("#frase-dinamica");
+        if (!text || reducedMotion.matches) return;
+        const phrases = ["Novo Cruzeiro: tradição em cada dose.", "Sabores que contam a nossa história.", "Conheça as cachaças da nossa terra.", "Histórias que nascem nos alambiques.", "Um brinde à cultura de Novo Cruzeiro.", "Festival da Cachaça: tradição que atravessa gerações."];
+        let index = 0;
+        window.setInterval(() => {
+            text.classList.add("fade-out");
+            window.setTimeout(() => {
+                index = (index + 1) % phrases.length;
+                text.textContent = phrases[index];
+                text.classList.remove("fade-out");
+            }, 500);
+        }, 6000);
+    }
+    initCarousel();
+    initBannerPhrases();
+})();

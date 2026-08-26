@@ -33,6 +33,27 @@ body {
     flex-direction: column;
 
     background-color: rgb(250, 246, 240);
+    overflow-x: hidden;
+}
+
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    border-radius: 0.35rem;
+    background: rgb(245, 184, 65);
+    color: rgb(58, 11, 12);
+    font-weight: 700;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+:where(a, button, [role="button"]):focus-visible {
+    outline: 3px solid rgb(245, 184, 65);
+    outline-offset: 3px;
 }
 
 main {
@@ -67,11 +88,15 @@ main.smartphone {
 }
 
 
-.header > img {
+.header > img,
+.header-brand img {
 
-    width: 6.4rem;
+    width: 100px;
+    height: 100px;
 
 }
+
+.header-brand { display: inline-flex; }
 
 
 .header nav .menu {
@@ -429,6 +454,8 @@ main.smartphone {
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
+
+.cards[hidden] { display: none !important; }
 
 
 .cards:hover {
@@ -1147,9 +1174,9 @@ main.smartphone {
 
 .festival-indicator {
 
-    width: 9px;
+    width: 44px;
 
-    height: 9px;
+    height: 44px;
 
     padding: 0;
 
@@ -1157,8 +1184,7 @@ main.smartphone {
 
     border-radius: 50%;
 
-    background:
-        rgba(255, 255, 255, 0.3);
+    background: radial-gradient(circle, rgba(255,255,255,.7) 0 5px, transparent 6px);
 
     cursor: pointer;
 
@@ -1171,12 +1197,11 @@ main.smartphone {
 
 .festival-indicator.active {
 
-    width: 28px;
+    width: 44px;
 
     border-radius: 1rem;
 
-    background:
-        rgb(245, 184, 65);
+    background: radial-gradient(ellipse, rgb(245, 184, 65) 0 14px, transparent 15px);
 }
 
 
@@ -1225,7 +1250,7 @@ main.smartphone {
         display: grid;
 
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(3, 1fr);
 
     }
 
@@ -1269,6 +1294,17 @@ main.smartphone {
 
     }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+    .cards, .festival-artist { opacity: 1; transform: none; }
 }
 
 

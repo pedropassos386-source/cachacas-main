@@ -4,6 +4,10 @@
 
 (() => {
 
+    "use strict";
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
     const festivalData = [
 
     /* ======================
@@ -143,6 +147,10 @@
     const indicators =
         document.querySelectorAll(".festival-indicator");
 
+    if (!mainImage || !mainName || !mainTime || !currentDay || !lineup || dayButtons.length !== festivalData.length) {
+        return;
+    }
+
 
     let currentIndex = 0;
 
@@ -155,13 +163,12 @@
 
     function createLineup(artists) {
 
-        lineup.innerHTML = "";
+        lineup.replaceChildren();
 
 
         artists.forEach((artist, index) => {
 
-            const card =
-                document.createElement("div");
+            const card = document.createElement("div");
 
 
             card.classList.add(
@@ -169,30 +176,18 @@
             );
 
 
-            card.style.animationDelay =
-                `${index * 0.12}s`;
-
-
-            card.innerHTML = `
-
-                <div class="festival-artist-name">
-
-                    <strong>
-                        ${artist.nome}
-                    </strong>
-
-                    <span>
-                        ${artist.descricao}
-                    </span>
-
-                </div>
-
-
-                <span class="festival-artist-time">
-                    ${artist.horario}
-                </span>
-
-            `;
+            if (!reducedMotion.matches) card.style.animationDelay = `${index * 0.12}s`;
+            const name = document.createElement("div");
+            name.className = "festival-artist-name";
+            const strong = document.createElement("strong");
+            strong.textContent = artist.nome;
+            const description = document.createElement("span");
+            description.textContent = artist.descricao;
+            const time = document.createElement("span");
+            time.className = "festival-artist-time";
+            time.textContent = artist.horario;
+            name.append(strong, description);
+            card.append(name, time);
 
 
             lineup.appendChild(card);
@@ -215,6 +210,8 @@
                     "active",
                     buttonIndex === index
                 );
+                button.setAttribute("aria-selected", String(buttonIndex === index));
+                button.tabIndex = buttonIndex === index ? 0 : -1;
 
             }
         );
@@ -227,6 +224,7 @@
                     "active",
                     indicatorIndex === index
                 );
+                indicator.setAttribute("aria-current", indicatorIndex === index ? "true" : "false");
 
             }
         );
@@ -244,12 +242,11 @@
             festivalData[index];
 
 
-        showcase.classList.add(
-            "is-changing"
-        );
+        if (!data) return;
+        if (!reducedMotion.matches) showcase.classList.add("is-changing");
 
 
-        setTimeout(() => {
+        window.setTimeout(() => {
 
             currentDay.textContent =
                 data.dia;
@@ -286,7 +283,7 @@
 
             currentIndex = index;
 
-        }, 350);
+        }, reducedMotion.matches ? 0 : 350);
 
     }
 
@@ -320,11 +317,7 @@
         );
 
 
-        festivalInterval =
-            setInterval(
-                nextFestivalDay,
-                7000
-            );
+        if (!reducedMotion.matches && !document.hidden) festivalInterval = window.setInterval(nextFestivalDay, 7000);
 
     }
 
@@ -357,8 +350,22 @@
                 }
             );
 
+            button.addEventListener("keydown", (event) => {
+                if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+                event.preventDefault();
+                const current = Number(button.dataset.festivalIndex);
+                const direction = event.key === "ArrowRight" ? 1 : -1;
+                const index = (current + direction + dayButtons.length) % dayButtons.length;
+                showFestivalDay(index);
+                dayButtons[index].focus();
+                startFestivalInterval();
+            });
+
         }
     );
+
+    document.addEventListener("visibilitychange", startFestivalInterval);
+    reducedMotion.addEventListener("change", startFestivalInterval);
 
 
     /* ==========================================
