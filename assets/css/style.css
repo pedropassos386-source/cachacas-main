@@ -139,7 +139,7 @@ main.smartphone {
 
     width: 100%;
 
-    height: 600px;
+    height: 400px;
 
     overflow: hidden;
 
@@ -163,7 +163,9 @@ main.smartphone {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    /* background-size: cover; */
+
+    object-fit:cover;
 
     object-position: center;
 
@@ -309,19 +311,15 @@ main.smartphone {
 ========================= */
 
 .cachacas-area .container {
-
     width: 100%;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
-    gap: 1rem;
+    gap: 1.5rem;
 
     margin: 0 auto;
-
-
 }
 
 
@@ -389,65 +387,56 @@ main.smartphone {
 ========================= */
 
 .cachacas-section {
-
     display: flex;
 
-    gap: 1.5rem;
+    gap: 1rem;
 
     overflow: hidden;
 
-    max-width: 45rem;
+    width: 100%;
+    max-width: 70rem;
 
     padding: 1rem;
-
 }
 
 
 /* =========================
-   CARDS
+   CARD DA CACHAÇA
 ========================= */
 
 .cards {
+    flex: 1 1 0;
 
-    flex:
-        0 0
-        calc(33.333% - 1rem);
+    min-width: 0;
+    height: 23rem;
 
-    min-width: 13rem;
+    padding: 1.25rem 1rem;
 
-    height: 18rem;
+    background-color: white;
 
-    padding:
-        1.25rem 1rem;
+    border: 2px solid rgb(58, 9, 10);
+    border-radius: 1rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    border:
-        2px solid
-        rgb(58, 9, 10);
+    box-sizing: border-box;
 
-    border-radius: 1rem;
-
-    background-color: white;
+    overflow: hidden;
 
     transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
 .cards:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-4px);
 
     box-shadow:
-        4px 4px 10px
+        0 8px 20px
         rgba(0, 0, 0, 0.15);
-
 }
 
 
@@ -456,14 +445,20 @@ main.smartphone {
 ========================= */
 
 .cards.fade-in {
+    animation: cachacaEntrada 0.5s ease forwards;
+}
 
-    opacity: 0;
+@keyframes cachacaEntrada {
 
-    animation:
-        fade-in
-        0.4s
-        ease-in-out
-        forwards;
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 
 }
 
@@ -473,17 +468,14 @@ main.smartphone {
 ========================= */
 
 .cards > img {
-
     width: 100%;
-
-    height: 10.5rem;
+    height: 13.5rem;
 
     object-fit: cover;
 
     border-radius: 1rem;
 
-    margin-bottom: 0.5rem;
-
+    margin-bottom: 0.8rem;
 }
 
 
@@ -492,71 +484,58 @@ main.smartphone {
 ========================= */
 
 .cards span {
+    color: rgb(58, 9, 10);
 
-    color:
-        rgb(58, 9, 10);
-
-    font-size: 1rem;
-
+    font-size: 1.1rem;
     font-weight: bold;
 
     text-align: center;
-
 }
-
 
 /* =========================
    BOTÃO VER MAIS
 ========================= */
 
 .ver-mais {
-
     width: 100%;
 
-    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
 
-    padding:
-        0.75rem 1rem;
+    /* joga o botão para o final do card */
+    margin-top: auto;
 
     border: none;
-
     border-radius: 1.5rem;
 
-    background-color:
-        rgb(250, 246, 240);
+    background-color: rgb(250, 246, 240);
 
-    color:
-        rgb(58, 9, 10);
+    color: rgb(58, 9, 10);
 
     font-weight: bold;
 
     text-align: center;
-
     text-decoration: none;
+
+    box-sizing: border-box;
 
     transition:
         background-color 0.15s ease,
         transform 0.15s ease,
         box-shadow 0.15s ease,
         color 0.15s ease;
-
 }
 
 
 .ver-mais:hover {
-
-    background-color:
-        rgb(58, 11, 12);
+    background-color: rgb(58, 11, 12);
 
     color: white;
 
-    transform:
-        scale(1.05);
+    transform: scale(1.03);
 
     box-shadow:
         4px 4px 5px
         rgba(0, 0, 0, 0.3);
-
 }
 
 

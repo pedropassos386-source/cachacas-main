@@ -1,147 +1,258 @@
 const section = document.querySelector(".cachacas-section");
-const cards = Array.from(section.querySelectorAll(".cards"));
+
+const cards = Array.from(
+    section.querySelectorAll(".cards")
+);
+
 const next = document.querySelector(".go-forward");
 const prev = document.querySelector(".go-back");
 
-const mobile = window.matchMedia("(max-width: 768px)");
-
-let cardsPerPage = mobile.matches ? 1 : 3;
 let currentIndex = 0;
+let carouselInterval;
 
-function animateCards(startIndex) {
-    for (
-        let i = startIndex;
-        i < startIndex + cardsPerPage && i < cards.length;
-        i++
-    ) {
-        const card = cards[i];
+const AUTO_DELAY = 4000;
 
-        // remove animação anterior
-        card.classList.remove("fade-in");
-        card.style.animationDelay = "0s";
 
-        // força reflow
-        void card.offsetHeight;
+/* ==========================================
+   QUANTIDADE DE CARDS VISÍVEIS
+========================================== */
 
-        // reaplica animação
-        card.classList.add("fade-in");
-        card.style.animationDelay = `${(i - startIndex) * 0.1}s`;
+function getCardsPerPage() {
+
+    if (window.innerWidth <= 600) {
+        return 1;
     }
+
+    if (window.innerWidth <= 900) {
+        return 2;
+    }
+
+    return 4;
 }
+
+
+/* ==========================================
+   ATUALIZAR CARROSSEL
+========================================== */
 
 function updateCarousel() {
 
-    // esconde todos os cards
+    const cardsPerPage = getCardsPerPage();
+
+    /* esconde todos */
+
     cards.forEach(card => {
+
         card.style.display = "none";
+
+        card.classList.remove("fade-in");
+
     });
 
-    // mostra apenas a quantidade definida em cardsPerPage
-    for (
-        let i = currentIndex;
-        i < currentIndex + cardsPerPage && i < cards.length;
-        i++
-    ) {
-        cards[i].style.display = "flex";
+
+    /*
+     Mostra a quantidade necessária.
+     O % faz o carrossel voltar para
+     o início automaticamente.
+    */
+
+    for (let i = 0; i < cardsPerPage; i++) {
+
+        const cardIndex =
+            (currentIndex + i) % cards.length;
+
+        const card = cards[cardIndex];
+
+        card.style.display = "flex";
+
+        card.style.animationDelay =
+            `${i * 0.1}s`;
+
+        void card.offsetHeight;
+
+        card.classList.add("fade-in");
+
     }
 
-    animateCards(currentIndex);
-
-    // botão voltar
-    prev.style.opacity =
-        currentIndex === 0 ? "0.5" : "1";
-
-    prev.style.pointerEvents =
-        currentIndex === 0 ? "none" : "auto";
-
-    // botão avançar
-    next.style.opacity =
-        currentIndex + cardsPerPage >= cards.length
-            ? "0.5"
-            : "1";
-
-    next.style.pointerEvents =
-        currentIndex + cardsPerPage >= cards.length
-            ? "none"
-            : "auto";
 }
+
+
+/* ==========================================
+   PRÓXIMA CACHAÇA
+========================================== */
+
+function nextCard() {
+
+    currentIndex =
+        (currentIndex + 1) % cards.length;
+
+    updateCarousel();
+
+}
+
+
+/* ==========================================
+   CACHAÇA ANTERIOR
+========================================== */
+
+function previousCard() {
+
+    currentIndex =
+        (currentIndex - 1 + cards.length)
+        % cards.length;
+
+    updateCarousel();
+
+}
+
+
+/* ==========================================
+   TROCA AUTOMÁTICA
+========================================== */
+
+function startCarousel() {
+
+    clearInterval(carouselInterval);
+
+    carouselInterval = setInterval(
+        nextCard,
+        AUTO_DELAY
+    );
+
+}
+
+
+/* ==========================================
+   SETA DIREITA
+========================================== */
 
 next.addEventListener("click", () => {
 
-    if (currentIndex + cardsPerPage < cards.length) {
+    nextCard();
 
-        currentIndex += cardsPerPage;
+    startCarousel();
 
-        updateCarousel();
-    }
 });
+
+
+/* ==========================================
+   SETA ESQUERDA
+========================================== */
 
 prev.addEventListener("click", () => {
 
-    if (currentIndex - cardsPerPage >= 0) {
+    previousCard();
 
-        currentIndex -= cardsPerPage;
+    startCarousel();
 
-        updateCarousel();
-    }
 });
 
 
-// MUDANÇA AUTOMÁTICA ENTRE MOBILE E DESKTOP
-mobile.addEventListener("change", (event) => {
+/* ==========================================
+   PAUSA AO PASSAR O MOUSE
+========================================== */
 
-    if (event.matches) {
-        // 768px ou menor
-        cardsPerPage = 1;
-    } else {
-        // maior que 768px
-        cardsPerPage = 3;
-    }
+section.addEventListener("mouseenter", () => {
 
-    // volta para o começo do carrossel
-    currentIndex = 0;
+    clearInterval(carouselInterval);
 
-    // redesenha o carrossel
+});
+
+
+section.addEventListener("mouseleave", () => {
+
+    startCarousel();
+
+});
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+window.addEventListener("resize", () => {
+
     updateCarousel();
+
 });
 
 
-// inicia o carrossel
+/* ==========================================
+   INICIAR
+========================================== */
+
 updateCarousel();
 
+startCarousel();
+
+
+
+/* ==========================================
+   FRASES DO BANNER
+========================================== */
+
 const frases = [
+
     "Novo Cruzeiro: tradição em cada dose.",
+
     "Sabores que contam a nossa história.",
+
     "Conheça as cachaças da nossa terra.",
+
     "Histórias que nascem nos alambiques.",
+
     "Um brinde à cultura de Novo Cruzeiro.",
+
     "Festival da Cachaça: tradição que atravessa gerações."
+
 ];
 
-const texto = document.querySelector("#frase-dinamica");
+
+const texto = document.querySelector(
+    "#frase-dinamica"
+);
+
 
 let fraseAtual = 0;
 
+
+/* ==========================================
+   TROCAR FRASE
+========================================== */
+
 function trocarFrase() {
 
-    // desaparece
     texto.classList.add("fade-out");
+
 
     setTimeout(() => {
 
-        // passa para a próxima frase
         fraseAtual++;
 
+
         if (fraseAtual >= frases.length) {
+
             fraseAtual = 0;
+
         }
 
-        texto.textContent = frases[fraseAtual];
 
-        // aparece novamente
-        texto.classList.remove("fade-out");
+        texto.textContent =
+            frases[fraseAtual];
+
+
+        texto.classList.remove(
+            "fade-out"
+        );
 
     }, 500);
+
 }
 
-setInterval(trocarFrase, 6000);
+
+/* Troca de frase a cada 6 segundos */
+
+setInterval(
+    trocarFrase,
+    6000
+);
