@@ -49,7 +49,9 @@ body {
     transform: translateY(-200%);
 }
 
-.skip-link:focus { transform: translateY(0); }
+.skip-link:focus {
+    transform: translateY(0);
+}
 
 :where(a, button, [role="button"]):focus-visible {
     outline: 3px solid rgb(245, 184, 65);
@@ -88,7 +90,7 @@ main.smartphone {
 }
 
 
-.header > img,
+.header>img,
 .header-brand img {
 
     width: 100px;
@@ -96,7 +98,9 @@ main.smartphone {
 
 }
 
-.header-brand { display: inline-flex; }
+.header-brand {
+    display: inline-flex;
+}
 
 
 .header nav .menu {
@@ -146,8 +150,7 @@ main.smartphone {
     transform: scale(1.05);
 
     box-shadow:
-        4px 4px 5px
-        rgba(255, 255, 255, 0.2);
+        4px 4px 5px rgba(255, 255, 255, 0.2);
 
     color: rgb(245, 184, 65);
 
@@ -179,7 +182,7 @@ main.smartphone {
 
 /* IMAGEM DO BANNER */
 
-.banner > img {
+.banner>img {
 
     position: absolute;
 
@@ -190,7 +193,7 @@ main.smartphone {
 
     /* background-size: cover; */
 
-    object-fit:cover;
+    object-fit: cover;
 
     object-position: center;
 
@@ -245,11 +248,9 @@ main.smartphone {
     line-height: 1.2;
 
     text-shadow:
-        0 2px 4px
-        rgba(0, 0, 0, 0.9),
+        0 2px 4px rgba(0, 0, 0, 0.9),
 
-        0 5px 15px
-        rgba(0, 0, 0, 0.8);
+        0 5px 15px rgba(0, 0, 0, 0.8);
 
     transition:
         opacity 0.5s ease,
@@ -348,6 +349,77 @@ main.smartphone {
 }
 
 
+
+
+
+
+
+
+/* =========================
+   TAGS DAS CACHAÇAS
+========================= */
+
+.cachaca-tags {
+    width: 80%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.4rem;
+
+    margin-top: 0.6rem;
+    margin-bottom: 0.7rem;
+}
+
+
+/* TAG PADRÃO */
+
+.cards .tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.30rem 0.60rem;
+
+    border-radius: 1rem;
+
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    line-height: 1;
+
+    text-align: center;
+}
+
+
+/* LOCAL / FAZENDA / ALAMBIQUE */
+
+.tag-local {
+    background-color: rgb(250, 240, 213);
+
+    color: rgb(96, 61, 12);
+
+    border:
+        1px solid
+        rgb(220, 176, 87);
+}
+
+
+/* PRODUTOR */
+
+.tag-produtor {
+    background-color: rgb(245, 232, 232);
+
+    color: rgb(58, 11, 12);
+
+    border:
+        1px solid
+        rgb(107, 70, 71);
+}
+
+
 /* =========================
    BOTÕES DE NAVEGAÇÃO
 ========================= */
@@ -401,8 +473,7 @@ main.smartphone {
         rgb(58, 11, 12);
 
     box-shadow:
-        0 3px 8px
-        rgba(0, 0, 0, 0.2);
+        0 3px 8px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -419,7 +490,7 @@ main.smartphone {
     overflow: hidden;
 
     width: 100%;
-    max-width: 70rem;
+    max-width: 75rem;
 
     padding: 1rem;
 }
@@ -433,7 +504,7 @@ main.smartphone {
     flex: 1 1 0;
 
     min-width: 0;
-    height: 23rem;
+    height: 25rem;
 
     padding: 1.25rem 1rem;
 
@@ -455,15 +526,16 @@ main.smartphone {
         box-shadow 0.2s ease;
 }
 
-.cards[hidden] { display: none !important; }
+.cards[hidden] {
+    display: none !important;
+}
 
 
 .cards:hover {
     transform: translateY(-4px);
 
     box-shadow:
-        0 8px 20px
-        rgba(0, 0, 0, 0.15);
+        0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -494,7 +566,7 @@ main.smartphone {
    IMAGEM DOS CARDS
 ========================= */
 
-.cards > img {
+.cards>img {
     width: 100%;
     height: 13.5rem;
 
@@ -510,10 +582,11 @@ main.smartphone {
    NOME DA CACHAÇA
 ========================= */
 
-.cards span {
+.cards .cachaca-nome {
     color: rgb(58, 9, 10);
 
     font-size: 1.1rem;
+
     font-weight: bold;
 
     text-align: center;
@@ -561,8 +634,7 @@ main.smartphone {
     transform: scale(1.03);
 
     box-shadow:
-        4px 4px 5px
-        rgba(0, 0, 0, 0.3);
+        4px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -577,12 +649,10 @@ main.smartphone {
     padding: 5rem 1.5rem;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             rgb(38, 5, 7),
             rgb(58, 11, 12),
-            rgb(81, 20, 18)
-        );
+            rgb(81, 20, 18));
 
     color: white;
 
@@ -683,8 +753,7 @@ main.smartphone {
         0.8rem 1.4rem;
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.25);
+        1px solid rgba(255, 255, 255, 0.25);
 
     border-radius: 2rem;
 
@@ -780,8 +849,7 @@ main.smartphone {
     overflow: hidden;
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.15);
+        1px solid rgba(255, 255, 255, 0.15);
 
     border-radius: 1.5rem;
 
@@ -789,8 +857,7 @@ main.smartphone {
         rgba(0, 0, 0, 0.25);
 
     box-shadow:
-        0 20px 50px
-        rgba(0, 0, 0, 0.3);
+        0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -808,7 +875,7 @@ main.smartphone {
 }
 
 
-.festival-main > img {
+.festival-main>img {
 
     position: absolute;
 
@@ -835,12 +902,10 @@ main.smartphone {
     inset: 0;
 
     background:
-        linear-gradient(
-            to top,
+        linear-gradient(to top,
             rgba(15, 2, 3, 0.98) 0%,
             rgba(15, 2, 3, 0.65) 40%,
-            rgba(15, 2, 3, 0.15) 80%
-        );
+            rgba(15, 2, 3, 0.15) 80%);
 }
 
 
@@ -934,8 +999,7 @@ main.smartphone {
         0.6rem 1rem;
 
     border-left:
-        3px solid
-        rgb(245, 184, 65);
+        3px solid rgb(245, 184, 65);
 
     background:
         rgba(0, 0, 0, 0.3);
@@ -984,7 +1048,7 @@ main.smartphone {
 }
 
 
-.festival-other-header > span {
+.festival-other-header>span {
 
     color:
         rgb(245, 184, 65);
@@ -1037,8 +1101,7 @@ main.smartphone {
     gap: 1rem;
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.1);
+        1px solid rgba(255, 255, 255, 0.1);
 
     border-radius: 0.8rem;
 
@@ -1051,9 +1114,7 @@ main.smartphone {
         translateX(25px);
 
     animation:
-        festivalArtistEntry
-        0.45s ease
-        forwards;
+        festivalArtistEntry 0.45s ease forwards;
 }
 
 
@@ -1136,8 +1197,7 @@ main.smartphone {
    TROCA DO DIA
 ========================================== */
 
-.festival-showcase.is-changing
-.festival-main-content {
+.festival-showcase.is-changing .festival-main-content {
 
     opacity: 0;
 
@@ -1146,8 +1206,7 @@ main.smartphone {
 }
 
 
-.festival-showcase.is-changing
-.festival-main > img {
+.festival-showcase.is-changing .festival-main>img {
 
     opacity: 0.4;
 
@@ -1184,7 +1243,7 @@ main.smartphone {
 
     border-radius: 50%;
 
-    background: radial-gradient(circle, rgba(255,255,255,.7) 0 5px, transparent 6px);
+    background: radial-gradient(circle, rgba(255, 255, 255, .7) 0 5px, transparent 6px);
 
     cursor: pointer;
 
@@ -1297,14 +1356,24 @@ main.smartphone {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
     }
-    .cards, .festival-artist { opacity: 1; transform: none; }
+
+    .cards,
+    .festival-artist {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 
@@ -1404,7 +1473,7 @@ main.smartphone {
 
 
 .footer-social h2 {
-    
+
 
     margin: 0;
 
@@ -1440,8 +1509,7 @@ main.smartphone {
     align-items: center;
 
     border:
-        2px solid
-        rgb(107, 70, 71);
+        2px solid rgb(107, 70, 71);
 
     border-radius: 50%;
 
@@ -1491,8 +1559,7 @@ main.smartphone {
     padding-top: 1.2rem;
 
     border-top:
-        1px solid
-        rgba(255, 255, 255, 0.15);
+        1px solid rgba(255, 255, 255, 0.15);
 
     text-align: center;
 }
