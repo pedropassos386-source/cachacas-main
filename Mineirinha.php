@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cachaça Ribeirinha | Tradição regional de Minas Gerais</title>
+    <title>Cachaça Mineirinha | Tradição regional de Minas Gerais</title>
     <meta name="description" content="Conheça a história e a produção da Cachaça Ribeirinha, tradicional na região de Novo Cruzeiro, Minas Gerais.">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/cachaca-reset.css">
@@ -13,18 +13,18 @@
 </head>
 
 <body>
-    <?php require './components/cachacas-header.php';?>
+    <?php require './components/cachacas-header.php'; ?>
 
     <main id="conteudo-principal">
-        <h1 class="product-title">Cachaça Ribeirinha</h1>
+        <h1 class="product-title">Cachaça Mineirinha</h1>
         <div class="container">
             <div class="mini-imagens">
                 <div class="mini-imagem">
-                    <img src="assets/img/cachaca-ribeirinha.jpg" alt="Imagem cachaça Ribeirinha" id="front">
+                    <img src="assets/img/Photos-1-001/Mineirinha.jpg" alt="Imagem Mineirinha" id="front">
                 </div>
 
                 <div class="mini-imagem">
-                    <img src="assets/img/foto2-ribeirinha.jpg" alt="Imagem cachaça Ribeirinha" id="side">
+                    <img src="assets/img/Photos-1-001/Mineirinha2.jpg" alt="Imagem Mineirinha" id="side">
                 </div>
 
                 <div class="cachacas-social">
@@ -35,18 +35,18 @@
             </div>
 
             <div class="imagem-principal">
-                <img src="assets/img/cachaca-ribeirinha.jpg" alt="imagem principal Ribeirinha" id="img">
+                <img src="assets/img/Photos-1-001/Mineirinha.jpg" alt="imagem principal Mineirinha" id="img">
             </div>
 
             <section class="description">
                 <h2>Sobre</h2>
 
                 <ul class="description-list">
-                    <li>A Cachaça Ribeirinha é uma marca tradicionalmente comercializada e muito popular na região de Novo Cruzeiro (MG)</li>
+                    <li>Cachaça artesanal produzida e engarrafada por João Ferreira dos Santos</li>
 
-                    <li><span>Local de Fabricação:</span> Por Ribeiro no Corrego Furquilha</li>
+                    <li><span>Local de Fabricação:</span>Fazenda Mandassaia</li>
 
-                    <li><span>Desde quando:</span>2013</li>
+                    <li><span>Desde quando:</span>Sem data</li>
                 </ul>
             </section>
         </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cachaça Ribeirinha | Tradição regional de Minas Gerais</title>
+    <title>Cachaça Pinheirinha | Tradição regional de Minas Gerais</title>
     <meta name="description" content="Conheça a história e a produção da Cachaça Ribeirinha, tradicional na região de Novo Cruzeiro, Minas Gerais.">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/cachaca-reset.css">
@@ -13,18 +13,18 @@
 </head>
 
 <body>
-    <?php require './components/cachacas-header.php';?>
+    <?php require './components/cachacas-header.php'; ?>
 
     <main id="conteudo-principal">
-        <h1 class="product-title">Cachaça Ribeirinha</h1>
+        <h1 class="product-title">Cachaça Pinheirinha</h1>
         <div class="container">
             <div class="mini-imagens">
                 <div class="mini-imagem">
-                    <img src="assets/img/cachaca-ribeirinha.jpg" alt="Imagem cachaça Ribeirinha" id="front">
+                    <img src="assets/img/Photos-1-001/pinheirinha.jpg" alt="Imagem Pinheirinha" id="front">
                 </div>
 
                 <div class="mini-imagem">
-                    <img src="assets/img/foto2-ribeirinha.jpg" alt="Imagem cachaça Ribeirinha" id="side">
+                    <img src="assets/img/Photos-1-001/pinheirinha2.jpg" alt="Imagem Pinheirinha" id="side">
                 </div>
 
                 <div class="cachacas-social">
@@ -35,18 +35,17 @@
             </div>
 
             <div class="imagem-principal">
-                <img src="assets/img/cachaca-ribeirinha.jpg" alt="imagem principal Ribeirinha" id="img">
+                <img src="assets/img/Photos-1-001/pinheirinha.jpg" alt="imagem principal Pinheirinha" id="img">
             </div>
 
             <section class="description">
                 <h2>Sobre</h2>
 
                 <ul class="description-list">
-                    <li>A Cachaça Ribeirinha é uma marca tradicionalmente comercializada e muito popular na região de Novo Cruzeiro (MG)</li>
+                    <li>Fabricada Artesanalmente por Horácio Pinheiro de Macedo</li>
+                    <li><span>Local de Fabricação:</span> Fazenda Vila Barrinha</li>
 
-                    <li><span>Local de Fabricação:</span> Por Ribeiro no Corrego Furquilha</li>
-
-                    <li><span>Desde quando:</span>2013</li>
+                    <li><span>Desde quando:</span>1967</li>
                 </ul>
             </section>
         </div>
