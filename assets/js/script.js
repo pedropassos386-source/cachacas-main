@@ -62,3 +62,95 @@
     initCarousel();
     initBannerPhrases();
 })();
+
+/* ==========================================
+   ANIMAÇÃO DA LINHA DO TEMPO
+========================================== */
+
+(() => {
+
+    const timelineItems =
+        document.querySelectorAll(
+            ".timeline-item"
+        );
+
+
+    if (!timelineItems.length) {
+        return;
+    }
+
+
+    const reducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+
+    /*
+     Se o usuário prefere menos animações,
+     mostra tudo imediatamente.
+    */
+
+    if (reducedMotion) {
+
+        timelineItems.forEach(item => {
+
+            item.classList.add(
+                "timeline-visible"
+            );
+
+        });
+
+        return;
+
+    }
+
+
+    /* ======================================
+       OBSERVA QUANDO O ITEM ENTRA NA TELA
+    ====================================== */
+
+    const observer =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "timeline-visible"
+                        );
+
+
+                        /*
+                         Depois que apareceu,
+                         não precisa continuar
+                         observando.
+                        */
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.18
+            }
+
+        );
+
+
+    timelineItems.forEach(item => {
+
+        observer.observe(item);
+
+    });
+
+})();

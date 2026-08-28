@@ -1573,6 +1573,523 @@ main.smartphone {
     font-size: 0.85rem;
 }
 
+/* ==========================================
+   HISTÓRIA
+========================================== */
+
+.historia-section {
+    width: 100%;
+
+    padding: 6rem 1.5rem;
+
+    background-color: rgb(250, 246, 240);
+
+    color: rgb(58, 11, 12);
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.historia-header {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 5rem;
+
+    text-align: center;
+}
+
+
+.historia-subtitulo {
+    display: inline-block;
+
+    margin-bottom: 0.8rem;
+
+    color: rgb(151, 99, 16);
+
+    font-size: 0.85rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18rem;
+}
+
+
+.historia-header h2 {
+    margin-bottom: 1rem;
+
+    color: rgb(58, 11, 12);
+
+    font-size:
+        clamp(2rem, 5vw, 3.3rem);
+
+    line-height: 1.15;
+}
+
+
+.historia-header p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: rgb(85, 70, 70);
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   LINHA DO TEMPO
+========================================== */
+
+.timeline {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* linha central */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 3px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgb(245, 184, 65),
+            rgb(126, 75, 24)
+        );
+
+    transform: translateX(-50%);
+}
+
+
+/* ==========================================
+   ITEM
+========================================== */
+
+.timeline-item {
+    position: relative;
+
+    width: 50%;
+
+    padding:
+        0 4rem 5rem 0;
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* itens da direita */
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+
+    padding:
+        0 0 5rem 4rem;
+}
+
+
+/* quando aparece */
+
+.timeline-item.timeline-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   MARCADOR / ANO
+========================================== */
+
+.timeline-marker {
+    position: absolute;
+
+    top: 1.2rem;
+    right: -2.8rem;
+
+    z-index: 2;
+
+    width: 5.6rem;
+    height: 5.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border:
+        4px solid
+        rgb(250, 246, 240);
+
+    border-radius: 50%;
+
+    background-color:
+        rgb(245, 184, 65);
+
+    color:
+        rgb(58, 11, 12);
+
+    box-shadow:
+        0 5px 15px
+        rgba(58, 11, 12, 0.25);
+}
+
+
+.timeline-item:nth-child(even)
+.timeline-marker {
+    right: auto;
+    left: -2.8rem;
+}
+
+
+.timeline-marker span {
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+
+.timeline-marker-text span {
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.timeline-content {
+    position: relative;
+
+    padding: 2rem;
+
+    border:
+        1px solid
+        rgba(58, 11, 12, 0.12);
+
+    border-radius: 1.2rem;
+
+    background-color: white;
+
+    box-shadow:
+        0 10px 30px
+        rgba(58, 11, 12, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(58, 11, 12, 0.13);
+}
+
+
+/* pequeno traço dourado */
+
+.timeline-content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 2rem;
+
+    width: 4rem;
+    height: 4px;
+
+    border-radius:
+        0 0 1rem 1rem;
+
+    background-color:
+        rgb(245, 184, 65);
+}
+
+
+/* ==========================================
+   TEXTOS
+========================================== */
+
+.timeline-label {
+    display: inline-block;
+
+    margin-bottom: 0.7rem;
+
+    color:
+        rgb(151, 99, 16);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12rem;
+}
+
+
+.timeline-content h3 {
+    margin-bottom: 1rem;
+
+    color:
+        rgb(58, 11, 12);
+
+    font-size:
+        clamp(1.3rem, 3vw, 1.8rem);
+
+    line-height: 1.25;
+}
+
+
+.timeline-content p {
+    margin-bottom: 0.8rem;
+
+    color:
+        rgb(80, 70, 70);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   DESTAQUE 2026
+========================================== */
+
+.timeline-item-destaque
+.timeline-content {
+    border-color:
+        rgba(245, 184, 65, 0.7);
+
+    background:
+        linear-gradient(
+            145deg,
+            white,
+            rgb(255, 249, 235)
+        );
+}
+
+
+/* ==========================================
+   DATA DO FESTIVAL
+========================================== */
+
+.timeline-evento {
+    margin-top: 1.5rem;
+
+    padding: 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    border-radius: 0.8rem;
+
+    background-color:
+        rgb(58, 11, 12);
+
+    color: white;
+}
+
+
+.timeline-evento > span {
+    padding-right: 1rem;
+
+    border-right:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    color:
+        rgb(245, 184, 65);
+
+    font-size: 1.3rem;
+
+    font-weight: 800;
+}
+
+
+.timeline-evento div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.15rem;
+}
+
+
+.timeline-evento strong {
+    color: white;
+}
+
+
+.timeline-evento small {
+    color:
+        rgba(255, 255, 255, 0.7);
+}
+
+
+/* ==========================================
+   TABLET / CELULAR
+========================================== */
+
+@media (max-width: 768px) {
+
+    .historia-section {
+        padding:
+            4rem 1rem;
+    }
+
+
+    .historia-header {
+        margin-bottom: 3.5rem;
+    }
+
+
+    /* linha vai para esquerda */
+
+    .timeline::before {
+        left: 2.2rem;
+
+        transform: none;
+    }
+
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding:
+            0 0 3.5rem 5.5rem;
+    }
+
+
+    .timeline-marker,
+    .timeline-item:nth-child(even)
+    .timeline-marker {
+        top: 1rem;
+
+        left: 0;
+        right: auto;
+
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+
+
+    .timeline-marker span {
+        font-size: 0.8rem;
+    }
+
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR PEQUENO
+========================================== */
+
+@media (max-width: 480px) {
+
+    .timeline::before {
+        left: 1.65rem;
+    }
+
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        padding-left: 4.3rem;
+    }
+
+
+    .timeline-marker,
+    .timeline-item:nth-child(even)
+    .timeline-marker {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+
+    .timeline-marker span {
+        font-size: 0.67rem;
+    }
+
+
+    .timeline-content {
+        padding: 1.25rem;
+    }
+
+
+    .timeline-evento {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE - MENOS ANIMAÇÕES
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .timeline-item {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+
+    .timeline-content {
+        transition: none;
+    }
+
+}
+
 
 /* =========================
    RESPONSIVO
