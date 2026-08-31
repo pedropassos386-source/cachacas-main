@@ -28,38 +28,11 @@
 
 <body>
 
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
-
-  <!-- =========================
-         HEADER
-    ========================== -->
-
-  <header class="header">
-
-    <a class="header-brand" href="./index.html" aria-label="Cachaças de Novo Cruzeiro — página inicial">
-      <img src="./assets/img/logo.png" alt="Cachaças Novo Cruzeiro" width="500" height="500" decoding="async">
-    </a>
-
-    <nav>
-      <ul class="menu">
-
-        <li>
-          <a href="./index.html" aria-current="page">
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a href="./pages/premiation/premiation.php">
-            Premiações
-          </a>
-        </li>
-
-      </ul>
-    </nav>
-
-  </header>
-
+  <?php
+  $basePath = '.';
+  $currentPage = 'home';
+  require __DIR__ . '/components/site-header.php';
+  ?>
 
   <!-- =========================
          CONTEÚDO PRINCIPAL
@@ -804,64 +777,7 @@
 
   </main>
 
-
-  <!-- =========================
-         FOOTER
-    ========================== -->
-
-  <footer class="footer">
-
-    <div class="footer-content">
-
-      <div class="footer-brand">
-
-        <img src="./assets/img/logo.png" alt="Cachaças Novo Cruzeiro" width="500" height="500" loading="lazy"
-          decoding="async">
-
-        <p>
-          Cultura, tradição e história
-          de Novo Cruzeiro.
-        </p>
-
-      </div>
-
-
-      <div class="footer-social">
-
-        <h2>
-          Siga-nos
-        </h2>
-
-        <nav class="social">
-
-          <a href="https://www.instagram.com/rkmsistemas?igsi=MTI2MW9oZWFxM2pxcg%3D%3D" target="_blank"
-            aria-label="Instagram (abre em nova aba)" rel="noopener noreferrer">
-            <img src="./assets/icons/instagram.svg" alt="">
-          </a>
-
-          <a href="https://wa.me/5533988326434?text=Ol%C3%A1!%20Vim%20pelo%20site%20das%20cacha%C3%A7as!%20Gostaria%20de%20mais%20algumas%20infoma%C3%A7%C3%B5es."
-            target="_blank" aria-label="WhatsApp (abre em nova aba)" rel="noopener noreferrer">
-            <img src="./assets/icons/whatsapp.svg" alt="">
-          </a>
-
-        </nav>
-
-      </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-      <p>
-        © 2026 RKM Sistemas.
-        Todos os direitos reservados.
-      </p>
-
-    </div>
-
-  </footer>
-
+  <?php require __DIR__ . '/components/site-footer.php'; ?>
 
   <script src="./assets/js/script.js" defer></script>
   <script src="./assets/js/eventos.js" defer></script>
