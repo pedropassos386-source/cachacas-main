@@ -16,7 +16,7 @@
     content="Conheça as cachaças, os produtores e o Festival da Cachaça de Novo Cruzeiro, Minas Gerais.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:image" content="assets/img/artistas/Banner.png">
+  <meta property="og:image" content="assets/img/artistas/banner.png">
   <link rel="icon" href="./assets/img/logo.png" type="image/png">
 
   <link rel="stylesheet" href="assets/css/reset.css">
@@ -44,7 +44,7 @@
 
     <section class="banner">
 
-      <img src="./assets/img/artistas/Banner.png" alt="Estação antiga de Novo Cruzeiro" width="2172" height="724"
+      <img src="./assets/img/artistas/banner.png" alt="Estação antiga de Novo Cruzeiro" width="2172" height="724"
         fetchpriority="high">
 
       <h1 id="frase-dinamica">
