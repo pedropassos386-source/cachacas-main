@@ -20,9 +20,7 @@
   <link rel="icon" href="./assets/img/logo.png" type="image/png">
 
   <link rel="stylesheet" href="assets/css/reset.css">
-
   <link rel="stylesheet" href="assets/css/style.css">
-
   <link rel="stylesheet" href="assets/css/responsivo.css">
 </head>
 
@@ -55,7 +53,6 @@
 
     </section>
 
-
     <!-- =========================
              SEÇÃO DAS CACHAÇAS
         ========================== -->
@@ -63,390 +60,20 @@
     <section class="cachacas-area">
 
       <div class="titulo-cachacas">
-
-        <h2>
-          Conheça as Cachaças de Novo Cruzeiro
-        </h2>
-
-        <p>
-          Conheça um pouco das cachaças produzidas em nossa terra.
-        </p>
-
+        <h2>Conheça as Cachaças de Novo Cruzeiro</h2>
+        <p>Conheça um pouco das cachaças produzidas em nossa terra.</p>
       </div>
-
 
       <div class="container">
 
-        <!-- SETA ESQUERDA -->
-
         <button class="go-back" type="button" aria-label="Ver cachaças anteriores">
-
           <img src="./assets/icons/arrow-left.svg" alt="" width="24" height="24">
-
         </button>
 
-
-        <!-- CARDS -->
-
-        <section class="cachacas-section">
-
-          <!-- BORALINA -->
-
-          <article class="cards" style="--i: 1">
-
-            <img src="./assets/img/cachaca-boralina.webp" alt="Garrafa da Cachaça Boralina" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Boralina
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F.Borá
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Queixada/Lufa
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./boralina.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-          <!-- Gravatá -->
-
-          <article class="cards" style="--i: 2">
-
-            <img src="./assets/img/cachaca-gravata-ouro-700ml-00615_1.webp" alt="Garrafa da Cachaça Gravatá"
-              loading="lazy" decoding="async">
-
-            <span class="cachaca-nome">
-              Gravatá
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F.Borá
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Queixada
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./Gravata.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-
-          <!-- NOVA FONTE -->
-
-          <article class="cards" style="--i: 3">
-
-            <img src="./assets/img/cachaça-nova-fonte.jpg" alt="Garrafa da Cachaça Nova Fonte" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Nova Fonte
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F.Viana
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Queixada
-              </span>
-            </div>
-
-            <a class="ver-mais" href="nova-fonte.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-
-          <!-- HERCULANA -->
-
-          <article class="cards" style="--i: 4">
-
-            <img src="./assets/img/cachaca-herculana.webp" alt="Garrafa da Cachaça Herculana" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Herculana
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F.Consulta
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Santa Cruz
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./herculana.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-
-          <!-- FORMOSINHA -->
-
-          <article class="cards" style="--i: 5">
-
-            <img src="./assets/img/cachaca-formosinha.jpg" alt="Garrafa da Cachaça Formosinha" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Formosinha
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F.Ribeirão da Pedra
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Queixada
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./formosinha.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-
-          <!-- CARVALHO DE MINAS -->
-
-          <article class="cards" style="--i: 6">
-
-            <img src="./assets/img/cachaca-carvalho-de-minas.jpg" alt="Garrafa da Cachaça Carvalho de Minas"
-              loading="lazy" decoding="async">
-
-            <span class="cachaca-nome">
-              Carvalho de Minas
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                L:Corrego Espirito Santo
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Novilhona
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./carvalho-minas.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-
-          <!-- RIBEIRINHA -->
-
-          <article class="cards" style="--i: 7">
-
-            <img src="./assets/img/cachaca-ribeirinha.jpg" alt="Garrafa da Cachaça Ribeirinha" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Ribeirinha
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                L:Corrégo Furquilha
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Lufa
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./ribeirinha.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-          <!-- Barreiro -->
-
-          <article class="cards" style="--i: 8">
-
-            <img src="./assets/img/cachaca-barreiro.jpg" alt="Garrafa da Cachaça Barreiro" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Barreiro
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F:Santa Maria
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Sede
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./barreiro.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-          <!-- Coragem -->
-
-          <article class="cards" style="--i: 9">
-
-            <img src="./assets/img/artistas/Coragem.png" alt="Rótulo da Cachaça Coragem" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Coragem
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F:Conceição
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Novilhona
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./Coragem.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-          <article class="cards" style="--i: 10">
-
-            <img src="./assets/img/Photos-1-001/ramiro.jpg" alt="Rótulo da Cachaça Ramiro" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Ramiro Teixeira
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F:Santo Antônio
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Novilhona
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./ramiro.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-          <article class="cards" style="--i: 11">
-
-            <img src="./assets/img/Photos-1-001/pinheirinha.jpg" alt="Rótulo da Cachaça pinheirinha" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Pinheirinha
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F:Vila Barrinha
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Sede
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./pinheirinha.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-          <article class="cards" style="--i: 12">
-
-            <img src="./assets/img/Photos-1-001/Mineirinha.jpg" alt="Rótulo da Cachaça Mineirinha" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Mineirinha
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F:Mandassaia
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Lufa
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./Mineirinha.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-          <article class="cards" style="--i: 13">
-
-            <img src="./assets/img/Photos-1-001/aminesia.jpg" alt="Rótulo da Cachaça Aminésia" loading="lazy"
-              decoding="async">
-
-            <span class="cachaca-nome">
-              Aminésia
-            </span>
-
-            <div class="cachaca-tags">
-              <span class="tag tag-local">
-                F:Sobrado
-              </span>
-
-              <span class="tag tag-produtor">
-                D.Queixada
-              </span>
-            </div>
-
-            <a class="ver-mais" href="./Aminésia.php">
-              Ver Mais
-            </a>
-
-          </article>
-
-        </section>
-
-
-        <!-- SETA DIREITA -->
+        <?php require __DIR__ . '/components/cachacas-carousel.php'; ?>
 
         <button class="go-forward" type="button" aria-label="Ver próximas cachaças">
-
           <img src="./assets/icons/arrow-right.svg" alt="" width="24" height="24">
-
         </button>
 
       </div>
@@ -476,7 +103,6 @@
 
       </div>
 
-
       <!-- DIAS DO FESTIVAL -->
 
       <div class="festival-days" role="tablist" aria-label="Dias do Festival da Cachaça">
@@ -504,15 +130,12 @@
 
       <div class="festival-showcase" id="festival-showcase" aria-label="Programação selecionada do festival">
 
-        <!-- ATRAÇÃO PRINCIPAL -->
-
         <div class="festival-main">
 
           <img id="festival-main-image" src="./assets/img/artistas/artista-quinta.jpg"
             alt="Atração principal de sexta-feira" width="320" height="320" loading="lazy" decoding="async">
 
           <div class="festival-main-overlay"></div>
-
 
           <div class="festival-main-content">
 
@@ -530,9 +153,7 @@
 
             <div class="festival-time">
 
-              <span>
-                Show
-              </span>
+              <span>Show</span>
 
               <strong id="festival-main-time">
                 00:00
@@ -544,36 +165,21 @@
 
         </div>
 
-
-        <!-- OUTRAS ATRAÇÕES -->
-
         <div class="festival-other-shows">
 
           <div class="festival-other-header">
-
-            <span>
-              Programação
-            </span>
-
-            <h3>
-              Outros shows da noite
-            </h3>
-
+            <span>Programação</span>
+            <h3>Outros shows da noite</h3>
           </div>
 
-
           <div class="festival-lineup" id="festival-lineup">
-
             <!-- JavaScript coloca os artistas aqui -->
-
           </div>
 
         </div>
 
       </div>
 
-
-      <!-- INDICADORES -->
       <div class="festival-indicators">
 
         <button class="festival-indicator active" type="button" data-festival-index="0"
@@ -611,10 +217,7 @@
 
       </div>
 
-
       <div class="timeline">
-
-        <!-- 1850 -->
 
         <article class="timeline-item">
 
@@ -643,9 +246,6 @@
           </div>
 
         </article>
-
-
-        <!-- 1994 -->
 
         <article class="timeline-item">
 
@@ -681,9 +281,6 @@
 
         </article>
 
-
-        <!-- CRESCIMENTO -->
-
         <article class="timeline-item">
 
           <div class="timeline-marker timeline-marker-text">
@@ -717,9 +314,6 @@
           </div>
 
         </article>
-
-
-        <!-- HOJE -->
 
         <article class="timeline-item timeline-item-destaque">
 
