@@ -98,7 +98,8 @@
 
         <p>
           Música, cultura e tradição se encontram em uma das
-          maiores celebrações de Novo Cruzeiro.
+          maiores celebrações de Novo Cruzeiro. Horários e a distribuição
+          das atrações por dia serão atualizados conforme confirmação oficial.
         </p>
 
       </div>
@@ -132,7 +133,7 @@
 
         <div class="festival-main">
 
-          <img id="festival-main-image" src="./assets/img/artistas/artista-quinta.jpg"
+          <img id="festival-main-image" src="./assets/img/artistas/icaro-gilmar.jpg"
             alt="Atração principal de sexta-feira" width="320" height="320" loading="lazy" decoding="async">
 
           <div class="festival-main-overlay"></div>
@@ -156,7 +157,7 @@
               <span>Show</span>
 
               <strong id="festival-main-time">
-                00:00
+                Horário a confirmar
               </strong>
 
             </div>
