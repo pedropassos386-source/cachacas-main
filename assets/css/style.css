@@ -1965,6 +1965,37 @@ main.smartphone {
 }
 
 
+.historia-saiba-mais {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    margin-top: 3.5rem;
+
+    padding: 0.8rem 1.3rem;
+
+    border-radius: 2rem;
+
+    background-color: rgb(58, 11, 12);
+    color: white;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.historia-saiba-mais:hover {
+    transform: translateY(-3px);
+
+    background-color: rgb(245, 184, 65);
+    color: rgb(58, 11, 12);
+}
+
+
 /* ==========================================
    TABLET / CELULAR
 ========================================== */
