@@ -367,6 +367,9 @@ $statusLabels = [
     'cancelado' => 'Cancelado',
     'divergencia' => 'Divergência'
 ];
+
+$basePath = '../..';
+$currentPage = 'historia';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -383,21 +386,7 @@ $statusLabels = [
 </head>
 <body>
 
-<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
-
-<header class="header">
-    <a class="header-brand" href="../../index.html" aria-label="Ir para a página inicial">
-        <img src="../../assets/img/logo.png" alt="Cachaças Novo Cruzeiro">
-    </a>
-
-    <nav aria-label="Navegação principal">
-        <ul class="menu">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../premiation/premiation.php">Premiações</a></li>
-            <!-- <li><a href="#linha-do-tempo" aria-current="page">História do Festival</a></li> -->
-        </ul>
-    </nav>
-</header>
+<?php require __DIR__ . '/../../components/site-header.php'; ?>
 
 <main id="conteudo-principal">
 
@@ -540,32 +529,12 @@ $statusLabels = [
             <h2 id="fecho-titulo">Você possui um cartaz, fotografia ou registro antigo?</h2>
             <p>Os maiores vazios documentais estão nos primeiros anos do Festival. Registros guardados por moradores, comerciantes, produtores, ACIANC, Prefeitura ou Câmara podem ajudar a reconstruir essa memória com mais precisão.</p>
         </div>
-        <a href="../../index.html#festival" class="historia-voltar">Voltar ao Festival atual</a>
+        <a href="../../index.php#festival" class="historia-voltar">Voltar ao Festival atual</a>
     </section>
 
 </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <img src="../../assets/img/logo.png" alt="Cachaças Novo Cruzeiro">
-            <p>Cultura, tradição e história de Novo Cruzeiro.</p>
-        </div>
-
-        <div class="footer-social">
-            <h2>Siga-nos</h2>
-            <nav class="social" aria-label="Redes sociais">
-                <a href="#" aria-label="Instagram"><img src="../../assets/icons/instagram.svg" alt=""></a>
-                <a href="#" aria-label="WhatsApp"><img src="../../assets/icons/whatsapp.svg" alt=""></a>
-                <a href="#" aria-label="TikTok"><img src="../../assets/icons/titok.svg" alt=""></a>
-            </nav>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 Cachaças Novo Cruzeiro. Todos os direitos reservados.</p>
-    </div>
-</footer>
+<?php require __DIR__ . '/../../components/site-footer.php'; ?>
 
 <script src="../../assets/js/historia-festival.js" defer></script>
 </body>

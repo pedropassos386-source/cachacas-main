@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cachaça Ramiro Teixeira | Novo Cruzeiro, MG</title>
-    <meta name="description" content="Conheça a história e a produção da Cachaça Ramiro Teixeira, de Novo Cruzeiro, Minas Gerais.">
+    <title>Cachaça Coragem | Novo Cruzeiro, MG</title>
+    <meta name="description" content="Conheça a história e a tradição da Cachaça Coragem, produzida em Novo Cruzeiro, Minas Gerais.">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/cachaca-reset.css">
     <link rel="stylesheet" href="assets/css/cachaca.css">
@@ -13,14 +13,14 @@
 <body>
     <?php require './components/cachacas-header.php'; ?>
     <main id="conteudo-principal">
-        <h1 class="product-title">Cachaça Ramiro Teixeira</h1>
+        <h1 class="product-title">Cachaça Coragem</h1>
         <div class="container">
             <div class="mini-imagens">
                 <div class="mini-imagem">
-                    <img src="assets/img/fotos/ramiro.jpg" alt="Imagem da Cachaça Ramiro Teixeira" id="front">
+                    <img src="assets/img/cachaca-coragem.jpg" alt="Imagem da Cachaça Coragem" id="front">
                 </div>
                 <div class="mini-imagem">
-                    <img src="assets/img/fotos/ramiro2.jpg" alt="Segunda imagem da Cachaça Ramiro Teixeira" id="side">
+                    <img src="assets/img/artistas/coragem.png" alt="Rótulo da Cachaça Coragem" id="side">
                 </div>
                 <div class="cachacas-social">
                     <span class="instagram" aria-hidden="true">
@@ -29,14 +29,14 @@
                 </div>
             </div>
             <div class="imagem-principal">
-                <img src="assets/img/fotos/ramiro.jpg" alt="Imagem principal da Cachaça Ramiro Teixeira" id="img">
+                <img src="assets/img/cachaca-coragem.jpg" alt="Imagem principal da Cachaça Coragem" id="img">
             </div>
             <section class="description">
                 <h2>Sobre</h2>
                 <ul class="description-list">
-                    <li>A Cachaça Ramiro Teixeira é produzida em Novo Cruzeiro, no Vale do Jequitinhonha, em Minas Gerais. A produção utiliza alambiques de cobre e armazenamento em bálsamo, contribuindo para o aroma e o perfil característico da bebida.</li>
-                    <li><span>Local de Fabricação:</span> Fazenda Santo Antônio — Novo Cruzeiro — MG.</li>
-                    <li><span>Desde quando:</span> 1986.</li>
+                    <li>A Cachaça Coragem é uma das marcas mais tradicionais e antigas de Novo Cruzeiro, carregando em sua história parte da cultura e da tradição da produção artesanal de cachaça no município. Seu fabricante também é responsável por outros dois rótulos: a Fera Corajosa, em sua versão prata, e a Leite de Onça, ampliando uma produção que valoriza os sabores e a identidade da nossa terra.</li>
+                    <li><span>Local de Fabricação:</span> Fazenda Conceição, distrito de Novilhona, Novo Cruzeiro — MG.</li>
+                    <li><span>Desde quando:</span> 1957.</li>
                 </ul>
             </section>
         </div>

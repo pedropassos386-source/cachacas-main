@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="premiacoes-card" style="--i: 2">
-                            <img src="../../assets/img/cachaça-boralina.jpg" alt="Imagem da cachaça boralina">
+                            <img src="../../assets/img/cachaca-boralina.jpg" alt="Imagem da cachaça boralina">
                             <h3>Diferencial:</h3>
                             <p>Produzida na histórica Fazenda Borá (cuja tradição remonta a 1850), ela é amplamente reconhecida pelo uso do Bálsamo, madeira típica que confere notas herbáceas e picantes muito apreciadas por sommeliers.</p>
                         </div>
@@ -57,13 +57,13 @@
                     <h3>🥉Nova Fonte</h3>
                     <div class="nova-fonte">
                         <div class="premiacoes-card" style="--i: 6">
-                            <img src="../../assets/img/cachaça-nova-fonte.jpg" alt="Imagem da cachaça boralina">
+                            <img src="../../assets/img/cachaca-nova-fonte.jpg" alt="Imagem da cachaça boralina">
                             <h3>Reconhecimento:</h3>
                             <p>Ganhou destaque recente por documentários e registros sobre a produção artesanal (como no canal O Alambique), sendo reconhecida pela confiabilidade e procedência de sua "pinga" original.</p>
                         </div>
 
                         <div class="premiacoes-card" style="--i: 7">
-                            <img src="../../assets/img/cachaça-nova-fonte.jpg" alt="Imagem da cachaça boralina">
+                            <img src="../../assets/img/cachaca-nova-fonte.jpg" alt="Imagem da cachaça boralina">
                             <h3>Diferencial:</h3>
                             <p>O produtor mantém técnicas ancestrais, como a fermentação em cochos de madeira (jatobá), o que atrai colecionadores e entusiastas que buscam o sabor mais rústico e autêntico da região</p>
                         </div>
